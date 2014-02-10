@@ -15,7 +15,6 @@ local.properties
 .classpath
 .settings/
 .loadpath
-.pptx
 
 # External tool builders
 .externalToolBuilders/
@@ -151,6 +150,7 @@ ClientBin/
 *.[Pp]ublish.xml
 *.pfx
 *.publishsettings
+*.pptx
 
 # RIA/Silverlight projects
 Generated_Code/
