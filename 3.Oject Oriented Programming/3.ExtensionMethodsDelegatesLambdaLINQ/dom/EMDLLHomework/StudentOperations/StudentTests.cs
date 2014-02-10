@@ -26,19 +26,39 @@ namespace StudentOperations
             };
 
             //Names Query
+            Console.WriteLine("name query:");
             foreach (var student in CheckNames(students))
             {
                 Console.WriteLine(student.FirstName + " " + student.LastName);
             }
+            Console.WriteLine();
 
             //Age Query
             var ageQuery = from student in students
                 where student.Age >= 18 && student.Age <= 24
                 select student.FirstName + " " + student.LastName;
 
-            Console.WriteLine(string.Join(",",ageQuery));
+            Console.WriteLine("age query:\n"+string.Join(",",ageQuery));
+            Console.WriteLine();
 
+            //Sorting Students
+            Console.WriteLine("sorting with lambda:");
+            var sorted = students.OrderByDescending(x => x.FirstName).ThenByDescending(x => x.LastName);
+            foreach (var student in sorted)
+            {
+                Console.WriteLine(student.FirstName + " " + student.LastName);
+            }
+            Console.WriteLine();
 
+            //sorting with LINQ
+            Console.WriteLine("using LINQ:");
+            var sortedLINQ = from student in students
+                orderby student.FirstName descending ,student.LastName descending
+                select student;
+            foreach (var student in sortedLINQ)
+            {
+                Console.WriteLine(student.FirstName + " " + student.LastName);
+            }
         }
     }
 }
