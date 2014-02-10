@@ -1,0 +1,53 @@
+Top 3 most popular programming languages of 2013:
+
+1.Java 
+Features of C# Absent in Java
+C# includes more primitive types and the functionality to catch arithmetic exceptions.
+
+Includes a large number of notational conveniences over Java, many of which, such as operator overloading and user-defined casts, are already familiar to the large community of C++ programmers.
+
+Event handling is a "first class citizen"—it is part of the language itself.
+
+Allows the definition of "structs", which are similar to classes but may be allocated on the stack (unlike instances of classes in C# and Java).
+
+C# implements properties as part of the language syntax.
+
+C# allows switch statements to operate on strings.
+
+C# allows anonymous methods providing closure functionality.
+
+C# allows iterator that employs co-routines via a functional-style yield keyword.
+
+C# has support for output parameters, aiding in the return of multiple values, a feature shared by C++ and SQL.
+
+C# has the ability to alias namespaces.
+
+C# has "Explicit Member Implementation" which allows a class to specifically implement methods of an interface, separate from its own class methods. This allows it also to implement two different interfaces which happen to have a method of the same name. The methods of an interface do not need to be public; they can be made to be accessible only via that interface.
+
+C# provides integration with COM.
+
+Following the example of C and C++, C# allows call by reference for primitive and reference types.
+---------------------------------------------------------------------------------------------------------------------
+2.C
+C - an older programming language that is described as Hands-on. As the programmer you must tell the program to do everything. Also this language will let you do almost anything. It does not support object orriented code. Thus no classes. 
+C# - Full object orriented code resembling the style of C/C++ code. This is really closer to JAVA. C# is the latest version of the C style languages and is very good for developing web applications.
+---------------------------------------------------------------------------------------------------------------------
+3.C++
+C++ - an extention language per se of C. In C code ++ means increment 1. Thus C++ is better than C. It allows for highly controlled object orriented code. Once again a very hands on language that goes into MUCH detail.
+--------------------------------------------------------------------------------------------------------------------- 
+4.C#
+C# (pronounced “C-Sharp”) was developed by Microsoft in 2000 as a fundamental part of its .NET framework. C# is an object-oriented, multi-paradigm programming language that combines the best of C and C++. Learning C# is a must for any programmer who wants to develop for Microsoft platforms (including Windows).
+
+C# is an elegant and type-safe object-oriented language that enables
+developers to build a variety of secure and robust applications
+that run on the .NET Framework. You can use C# to create traditional
+Windows client applications, XML Web services,distributed components,
+client-server applications, database applications, and much,much more.
+
+---------------------------------------------------------------------------------------------------
+
+Difference between C# and .NET Framework:
+
+C# programs run on the .NET Framework, an integral component of Windows that includes a virtual execution system called the common language runtime (CLR) and a unified set of class libraries. The CLR is the commercial implementation by Microsoft of the common language infrastructure (CLI), an international standard that is the basis
+for creating execution and development environments in which languages and libraries work together seamlessly.
+
