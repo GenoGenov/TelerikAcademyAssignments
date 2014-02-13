@@ -1,24 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Timer
+namespace TimerUsingEvents
 {
-    internal delegate void InvokerDelegate();
-
     public class Timer
     {
         private int calls;
-        private InvokerDelegate invoker;
         private int t;
+        public delegate void TimerEvent(object sender, EventArgs e);
+        public event TimerEvent onTimeElapsed;
 
         public Timer(int t)
         {
             this.T = t;
             this.calls = 0;
+
         }
 
         public int T
@@ -34,29 +35,27 @@ namespace Timer
             }
         }
 
-        private void PrintTime()
+        public int Calls
         {
-            Console.SetCursorPosition(0, 0);
-            Console.WriteLine("The methods are called every {0} seconds", this.T);
-            Console.WriteLine(DateTime.Now);
+            get { return calls; }
+            private set { this.calls = value; }
         }
 
-        private void Statistics()
+        private void Invoke(EventArgs e)
         {
-            Console.WriteLine("Calls since start:");
-            Console.WriteLine(this.calls);
+            if(onTimeElapsed!=null)
+            onTimeElapsed(this,e);
         }
 
-        public void BeginInvoke()
+        public void Run()
         {
-            this.invoker = PrintTime;
-            invoker += Statistics;
 
             while (true)
             {
-                invoker();
-                this.calls++;
-                Thread.Sleep(this.T*1000);
+                Console.Clear();
+                Invoke(EventArgs.Empty);
+                this.Calls++;
+                Thread.Sleep(this.T * 1000);
             }
         }
     }

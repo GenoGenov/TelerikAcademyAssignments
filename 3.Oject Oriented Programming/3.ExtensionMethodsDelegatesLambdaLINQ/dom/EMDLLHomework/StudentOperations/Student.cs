@@ -8,11 +8,18 @@ namespace StudentOperations
 {
     public class Student
     {
-        public string FirstName { get;private set; }
+        private int age;
+
+        public Student(string fName, string lName, int age)
+        {
+            this.FirstName = fName;
+            this.LastName = lName;
+            this.Age = age;
+        }
+
+        public string FirstName { get; private set; }
 
         public string LastName { get; private set; }
-
-        private int age;
 
         public int Age
         {
@@ -25,13 +32,6 @@ namespace StudentOperations
                 }
                 age = value;
             }
-        }
-
-        public Student(string fName, string lName,int age)
-        {
-            this.FirstName = fName;
-            this.LastName = lName;
-            this.Age = age;
         }
     }
 }

@@ -11,18 +11,18 @@ namespace StudentOperations
         public static Student[] CheckNames(IEnumerable<Student> students)
         {
             return (from student in students
-                    where String.Compare(student.FirstName, student.LastName, StringComparison.Ordinal) <= 0
-                    select student).ToArray();
+                where String.Compare(student.FirstName, student.LastName, StringComparison.Ordinal) <= 0
+                select student).ToArray();
         }
 
         private static void Main(string[] args)
         {
             var students = new List<Student>
             {
-                new Student("Pesho","Minkov",22),
-                new Student("Gencho","Peshev",21),
-                new Student("Haralambi","Genchev",47),
-                new Student("Anatoli","Kurtev",55)
+                new Student("Pesho", "Minkov", 22),
+                new Student("Gencho", "Peshev", 21),
+                new Student("Haralambi", "Genchev", 47),
+                new Student("Anatoli", "Kurtev", 55)
             };
 
             //Names Query
@@ -38,7 +38,7 @@ namespace StudentOperations
                 where student.Age >= 18 && student.Age <= 24
                 select student.FirstName + " " + student.LastName;
 
-            Console.WriteLine("age query:\n"+string.Join(",",ageQuery));
+            Console.WriteLine("age query:\n" + string.Join(",", ageQuery));
             Console.WriteLine();
 
             //Sorting Students
@@ -53,14 +53,12 @@ namespace StudentOperations
             //sorting with LINQ
             Console.WriteLine("using LINQ:");
             var sortedLINQ = from student in students
-                orderby student.FirstName descending ,student.LastName descending
+                orderby student.FirstName descending, student.LastName descending
                 select student;
             foreach (var student in sortedLINQ)
             {
                 Console.WriteLine(student.FirstName + " " + student.LastName);
             }
-
-
         }
     }
 }
