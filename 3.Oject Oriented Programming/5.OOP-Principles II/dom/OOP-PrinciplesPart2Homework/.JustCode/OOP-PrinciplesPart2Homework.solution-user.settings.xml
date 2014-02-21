@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<JustCodeSettings Version="0.0" Timestamp="c56bee97-fb86-4f0b-8d78-1ac8b1e316cd">
+  <IgnoredErrorsAndWarningsSettings xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+    <IgnoredErrorsAndWarnings Version="2">
+      <FilePath>
+        <FileRelativePath>Bank/BankTests.cs</FileRelativePath>
+        <ProjectRelativePath>Bank/Bank.csproj</ProjectRelativePath>
+        <IgnoredElement>
+          <TextualIdentifier>5986246997906040731</TextualIdentifier>
+        </IgnoredElement>
+      </FilePath>
+    </IgnoredErrorsAndWarnings>
+  </IgnoredErrorsAndWarningsSettings>
+</JustCodeSettings>

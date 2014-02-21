@@ -436,6 +436,7 @@ namespace MonopolyGame
                 }
                 if (gameTime.TotalGameTime.TotalSeconds - last > 5)
                 {
+
                     last = gameTime.TotalGameTime.TotalSeconds;
                     message = "";
                 }
