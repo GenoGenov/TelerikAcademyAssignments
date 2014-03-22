@@ -36,14 +36,14 @@ namespace ParticleSystem
                     new MatrixCoords(0, 3))
                 );
 
-            //engine.AddParticle(
-            //    new DyingParticle(
-            //        new MatrixCoords(20, 5),
-            //        new MatrixCoords(-1, 1),
-            //        12)
-            //    );
+            engine.AddParticle(
+                new DyingParticle(
+                    new MatrixCoords(20, 5),
+                    new MatrixCoords(-1, 1),
+                    12)
+                );
             
-            engine.AddParticle(new ChikenParticle(new MatrixCoords(20,20),new MatrixCoords(1,0),5));
+          //  engine.AddParticle(new ChikenParticle(new MatrixCoords(20,20),new MatrixCoords(1,0),5));
 
             var emitterPosition = new MatrixCoords(29, 0);
             var emitterSpeed = new MatrixCoords(0, 0);
@@ -54,7 +54,7 @@ namespace ParticleSystem
                 GenerateRandomParticle
                 );
 
-            //engine.AddParticle(emitter);
+            engine.AddParticle(emitter);
 
             var attractorPosition = new MatrixCoords(10, 3);
             var attractor = new ParticleAttractor(
