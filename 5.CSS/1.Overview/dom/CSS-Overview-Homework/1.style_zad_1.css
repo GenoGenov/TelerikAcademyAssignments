@@ -1,0 +1,58 @@
+﻿body{
+    font-size: 20px;
+}
+
+#dl_container{
+    position:relative;
+    width:30%;
+    height:50%;
+    top:25%;
+    left:35%;
+    background-color:lightgray;
+    text-align:center;
+}
+
+#dl_container h1{
+    font-size:1.6rem;
+    color:GrayText;
+}
+
+#dot{
+    position:fixed;
+    width:17px;
+    height:17px;
+    background-color:green;
+    border-radius:30px;
+    right:48%;
+}
+
+dt{
+    float: left;
+    font-style:italic;
+}
+
+dt:not(:first-child){
+    float: left;
+    margin-top:20px;
+}
+
+dd {
+    margin-left :9em;
+}
+.desc{
+    margin-top:20px;
+}
+#red_name_info{
+    color:red;
+    font-weight:bold;
+}
+.yellow{
+    color: #EFFCB1;
+}
+.gray{
+    color:gray;
+}
+.orange{
+    color:orange;
+    font-weight:bold;
+}

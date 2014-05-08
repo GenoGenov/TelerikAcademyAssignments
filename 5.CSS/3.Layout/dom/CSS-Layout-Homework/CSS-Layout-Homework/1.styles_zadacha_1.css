@@ -1,0 +1,12 @@
+﻿ul {
+    list-style: none;
+}
+
+li ul {
+    display: none;
+}
+
+li:hover > ul {
+    display: list-item;
+    padding-left: 10px;
+}

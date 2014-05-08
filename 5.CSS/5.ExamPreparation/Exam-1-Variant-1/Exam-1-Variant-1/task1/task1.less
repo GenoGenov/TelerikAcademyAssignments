@@ -1,0 +1,71 @@
+﻿body, html, div, nav, ul, li, a {
+    padding: 0;
+    margin: 0;
+}
+
+#wrapper {
+    width: 960px;
+    font-family: Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .sidebar {
+        padding:5px 15px;
+        list-style: none;
+        font-size: 1.4em;
+        width: 185px;
+        text-align: center;
+        background: #d29bff;
+        background: -moz-linear-gradient(top, #d29bff 0%, #8977ff 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d29bff), color-stop(100%,#8977ff));
+        background: -webkit-linear-gradient(top, #d29bff 0%,#8977ff 100%);
+        background: -o-linear-gradient(top, #d29bff 0%,#8977ff 100%);
+        background: -ms-linear-gradient(top, #d29bff 0%,#8977ff 100%);
+        background: linear-gradient(to bottom, #d29bff 0%,#8977ff 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d29bff', endColorstr='#8977ff',GradientType=0 );
+        border-radius:10px;
+
+        li {
+            position:relative;
+            padding:5px;
+            &:not(:last-of-type) {
+                border-bottom: 1px solid #9D00FF;
+            }
+            &:hover{
+                border-radius:5px;
+                border:1px solid #9D00FF;
+                ul{
+                      display:block;
+                      width:210px;
+                      position:absolute;
+                      left:190px;
+                      top:-5px;
+                      padding:5px;
+                      padding-left:25px;
+                      font-size:0.8em;
+                      background-color:#B5AAFF;
+                      border-radius:10px;
+                      list-style-image:url(imgs/arrow.png);
+                      list-style-position:outside;
+                      li{
+                          padding-left:0;
+                      }
+                      li:not(:first-of-type){
+                          list-style:none;
+                      }
+                  }
+            }
+
+            ul {
+            display: none;
+        }
+        }
+
+        
+    }
+}

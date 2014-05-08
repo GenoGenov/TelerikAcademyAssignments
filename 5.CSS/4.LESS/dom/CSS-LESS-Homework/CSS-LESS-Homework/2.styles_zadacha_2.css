@@ -1,0 +1,13 @@
+body div.ImageHolder {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+}
+.ImageHolder img{
+    width: inherit;
+    height: inherit;
+}
+
+#SelectedImage{
+    display: block;
+}

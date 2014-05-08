@@ -1,0 +1,71 @@
+﻿html, body {
+    width: 800px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid orange;
+    border-radius: 10px;
+    background: #3B3B3B;
+}
+
+    body > header {
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+        background: url("monitor-icon.png") no-repeat 10px 10px,radial-gradient(ellipse, transparent 0%, #343434 60% ) no-repeat 55% 155%;
+        padding: 10px;
+    }
+
+#form-login {
+    margin-left: 40px;
+}
+
+legend {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    float: left;
+}
+
+
+fieldset {
+    border: none;
+}
+
+input {
+    margin: 0 15px;
+}
+
+section{
+    padding:10px;
+}
+
+section header h1 {
+    font-weight:normal;
+    font-size:30px;
+    color: #F8D612;
+}
+
+article{
+    margin:0;
+}
+
+p {
+    margin:0;
+    color: #A9A9A9;
+}
+
+    p strong {
+        color: white;
+    }
+
+button {
+    border:none;
+    width:45px;
+    height:33px;
+    border-radius:20px;
+    background: url("go-red-button.png") no-repeat;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}

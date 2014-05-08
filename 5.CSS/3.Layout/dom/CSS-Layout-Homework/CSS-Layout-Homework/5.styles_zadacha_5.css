@@ -1,0 +1,73 @@
+﻿body {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+nav ul {
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    padding: 0 10px;
+    color: #31c3fa;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+article, section {
+    border: 1px solid black;
+}
+
+article {
+    display: inline-block;
+    float: left;
+    overflow: hidden;
+    max-width: 700px;
+    padding: 10px;
+    margin-right: 0;
+}
+
+    article section {
+        float: left;
+        margin: 10px;
+        padding: 10px;
+        width: 300px;
+    }
+
+    article h2 {
+        font-weight: normal;
+        float: left;
+        margin-top: -0.85em;
+        padding: 0 7px;
+        background: #fff;
+    }
+
+    article ul {
+        float: right;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    article li {
+        margin-bottom: 10px;
+    }
+
+aside {
+    overflow: hidden;
+    width: 300px;
+    height: 500px;
+    text-align: center;
+    margin-left: 2px;
+}
+
+    aside dl, aside dt, aside dd {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
