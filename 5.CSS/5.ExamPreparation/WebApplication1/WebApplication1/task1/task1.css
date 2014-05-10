@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 ﻿body,
 div,
 nav,
@@ -8,26 +5,10 @@ header,
 ul,
 li,
 a {
-=======
->>>>>>> origin/temp
-﻿div,
-ul,
-li,
-a,
-header,
-body,
-html {
-<<<<<<< HEAD
-=======
->>>>>>> 4630e60ae34b39dcd191452858cab809faa5894f
->>>>>>> origin/temp
   margin: 0;
   padding: 0;
 }
 body {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   color: #000000;
   font-size: 16px;
   font-family: Arial;
@@ -37,18 +18,6 @@ body div#wrapper {
 }
 body div#wrapper header {
   background: #77d1ff;
-=======
->>>>>>> origin/temp
-  width: 960px;
-  height: 200px;
-}
-#wrapper {
-  padding: 50px;
-  background: #002d44;
-<<<<<<< HEAD
-=======
->>>>>>> 4630e60ae34b39dcd191452858cab809faa5894f
->>>>>>> origin/temp
   background: -moz-linear-gradient(top, #002d44 0%, #77d1ff 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #002d44), color-stop(100%, #77d1ff));
   background: -webkit-linear-gradient(top, #002d44 0%, #77d1ff 100%);
@@ -56,9 +25,6 @@ body div#wrapper header {
   background: -ms-linear-gradient(top, #002d44 0%, #77d1ff 100%);
   background: linear-gradient(to bottom, #002d44 0%, #77d1ff 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#002d44', endColorstr='#77d1ff', GradientType=0);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   height: 150px;
   font-size: 2em;
   padding-top: 50px;
@@ -129,56 +95,3 @@ body div#wrapper header nav ul li.selected > ul {
 body div#wrapper header nav ul li.selected:hover > a {
   text-decoration: none;
 }
-=======
->>>>>>> origin/temp
-}
-a {
-  margin: 5px;
-  text-decoration: none;
-  color: black;
-  font-size: 32px;
-  font-family: Arial;
-}
-li {
-  padding: 5px;
-  margin-right: 15px;
-  border-radius: 15px;
-}
-li:hover {
-  background-color: rgba(31, 102, 138, 0.8);
-}
-nav ul {
-  list-style: none;
-}
-nav ul a,
-nav ul li {
-  display: inline-block;
-}
-nav ul li.selected {
-  background-color: rgba(23, 71, 94, 0.8);
-}
-nav ul li.selected ul {
-  position: absolute;
-  display: inline-block;
-  left: 50px;
-}
-nav ul li.selected ul li ul {
-  display: none;
-}
-nav ul li.selected ul li:hover ul {
-  display: block;
-  position: absolute;
-  left: 0;
-}
-nav ul li.selected ul li:hover ul li {
-  display: block;
-}
-nav ul li ul {
-  display: none;
-}
-<<<<<<< HEAD
-/*# sourceMappingURL=task1.css.map */
-=======
-/*# sourceMappingURL=task1.css.map */
->>>>>>> 4630e60ae34b39dcd191452858cab809faa5894f
->>>>>>> origin/temp
