@@ -1,0 +1,88 @@
+﻿body, html, p, a, ul, li, div, h1, h2, img {
+    padding: 0;
+    margin: 0;
+}
+
+#wrapper {
+    width: 960px;
+    font-family: 'Courier New', Courier, 'Nimbus Mono L', monospace;
+    font-size: 16px;
+    padding: 25px;
+
+    .notification-list {
+        position: relative;
+        border: 1px solid black;
+        border-bottom: none;
+        border-bottom: none;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        width: 470px;
+        background: #ababab;
+        background: -moz-linear-gradient(top, #ababab 0%, #dddddd 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ababab), color-stop(100%,#dddddd));
+        background: -webkit-linear-gradient(top, #ababab 0%,#dddddd 100%);
+        background: -o-linear-gradient(top, #ababab 0%,#dddddd 100%);
+        background: -ms-linear-gradient(top, #ababab 0%,#dddddd 100%);
+        background: linear-gradient(to bottom, #ababab 0%,#dddddd 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ababab', endColorstr='#dddddd',GradientType=0 );
+
+        li {
+            display: inline-block;
+            font-size: 1.2em;
+            padding: 5px;
+            border-bottom: 1px solid black;
+
+            &:not(:last-of-type) {
+                border-right: 1px solid black;
+            }
+
+            img {
+                width: 15px;
+                vertical-align: central;
+            }
+
+            a {
+                text-decoration: none;
+                color: #6F7171;
+                text-align: center;
+                margin: 10px;
+            }
+
+            &:hover {
+                border-bottom: none;
+
+                .content {
+                    position: absolute;
+                    display: block;
+                    border: 1px solid black;
+                    border-top: none;
+                    left: -1px;
+                    top: 32px;
+                    width: 470px;
+                    font-size: 0.7em;
+                    background-color: #DDDDDD;
+                    ul {
+                        li {
+                            border: none;
+                            a {
+                                img {
+                                    float:left;
+                                }
+                                span {
+                                    text-align: justify;
+                                    &:hover{
+                                        text-decoration:underline;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .content {
+            display: none;
+        }
+    }
+}

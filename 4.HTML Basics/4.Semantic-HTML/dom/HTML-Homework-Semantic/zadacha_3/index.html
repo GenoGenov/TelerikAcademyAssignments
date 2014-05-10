@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body style="padding-left:20px">
+    <header>
+        <a href="index.html"><strong>MinkedMin</strong></a> 
+
+        <nav style="padding-top:20px">
+            <ul>
+                <li>
+                    <a href="#">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        What is MinkedMin
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Join Today!
+                    </a>
+                </li>               
+            </ul>
+            <form name="signin" method="get" action="signIn.php" id="sIn"> 
+                <ul>
+                    <li>
+                        <b>Sign in</b>
+                        <ul>
+                            <li><label for="username">Username</label><input type="text" id="username" autofocus="autofocus" /></li>
+                            <li><label for="pass">Password</label><input type="password" id="pass" /></li>
+                            <li><input type="submit" value="Sign In" /></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </form>
+        </nav>
+    </header>
+    <hr />
+    <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et auctor risus, eget pharetra nibh. Aliquam volutpat porta magna in consectetur. </h1>
+    <section>
+        <ul>
+            <li>Lorem</li>
+            <li>ipsum</li>
+            <li>dolor</li>
+        </ul>
+        <h2>Join MinkedMin Today!</h2>
+        <p>Sign Up</p>
+        <form name="registration" method="post" action="register.php">
+            <ul>
+                <li><label for="fName">First Name:</label><br /><input type="text" id="fName" /></li>
+                <li><label for="lName">Last Name:</label><br /><input type="text" id="lName" /></li>
+                <li><label for="email">Email:</label><br /><input type="email" id="email" /></li>
+                <li><label for="pass">Password:</label><br /><input type="password" id="pass" /></li>
+                <li><input type="submit" value="Join Now" /></li>
+            </ul>
+        </form>
+        <p>Already on MinkedMin? <a href="#sIn">Sign In</a></p>
+        <br />
+        <h3>Search for someone by name:</h3>
+        <form name="search" method="get" action="search.php">
+            <ul>
+                <li><label for="fName">First Name:</label><input type="text" id="fName" /></li>
+                <li><label for="lName">Last Name:</label><input type="text" id="lName" /></li>
+            </ul>
+            <input type="submit" value="Go" />
+        </form>
+    </section>
+</body>
+</html>

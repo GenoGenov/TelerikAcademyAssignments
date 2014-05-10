@@ -1,0 +1,198 @@
+﻿.clearfix {
+    zoom: 1;
+}
+
+    .clearfix:after {
+        content: "";
+        display: block;
+        clear: both;
+        height: 0;
+    }
+
+ul, li, div {
+    padding: 0;
+    margin: 0;
+}
+
+#container-main {
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    width: 450px;
+    height: 399px;
+    font-family: Segoe UI;
+    font-size: 12px;
+    background-color: #D2E8FE;
+    border: 1px solid #666666;
+    border-radius: 8px;
+    box-shadow: 2px 2px 15px #000;
+    padding: 10px 7px 27px 7px;
+    cursor: default;
+}
+
+    #container-main img {
+        float: left;
+    }
+
+    #container-main h1 {
+        font-size: 12px;
+        font-weight: normal;
+        margin-top: 0;
+    }
+
+#window-main {
+    border: 1px solid #666666;
+}
+
+.menu-item {
+    margin-right: 8px;
+    display: inline-block;
+}
+
+    .menu-item:first-letter {
+        text-decoration: underline;
+    }
+
+#window-main #menubar {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.50);
+    padding: 2px 2px 2px 4px;
+}
+
+#result {
+    border-radius: 3px;
+    font: Consolas;
+    height: 43px;
+    border: 1px solid #666666;
+    margin: 10px 10px 2px 10px;
+    background: -webkit-linear-gradient(#E6EFFB, #FFFFFF);
+    background: -moz-linear-gradient(#E6EFFB, #FFFFFF);
+    background: -o-linear-gradient(#E6EFFB, #FFFFFF);
+    background: linear-gradient(#E6EFFB, #FFFFFF);
+    text-align: right;
+    font-size: 24px;
+    font-weight: 600;
+    padding-bottom: 16px;
+}
+
+#resultNumber {
+    display: inline-block;
+    margin-bottom: 0px;
+}
+
+.bits {
+    border-radius: 3px;
+    border: 1px solid #666666;
+    height: 68px;
+    padding: 2px 2px 2px 18px;
+    margin: 6px 10px 5px 10px;
+}
+
+    .bits li {
+        font-family: Consolas;
+        text-align: center;
+        font-size: 14px;
+        color: #1C3759;
+        padding: 0px;
+        margin: 0px;
+        list-style: none;
+        float: left;
+    }
+
+#bits-firstLine li, #bits-thirdLine li {
+    margin-right: 18px;
+}
+
+#secondLineFirst, #fourthLineFirst {
+    margin-right: 200px;
+}
+
+#secondLineSecond {
+    margin-right: 135px;
+}
+
+#fourthLineSecond {
+    margin-right: 143px;
+}
+
+#countSystem-choice {
+    color: #1C3759;
+    float: left;
+    display: inline-block;
+    border-radius: 3px;
+    border: 1px solid #666666;
+    width: 70px;
+    padding: 2px 2px 15px 2px;
+    margin: 10px 1px 5px 10px;
+}
+
+#unknown-choice {
+    color: #1C3759;
+    border-radius: 3px;
+    border: 1px solid #666666;
+    width: 70px;
+    padding: 11px 2px 7px 2px;
+    margin: -97px 10px 5px 10px;
+}
+
+#buttons-area {
+    padding-left: 5px;
+    display: inline-block;
+}
+
+button {
+    width: 37px;
+    height: 30px;
+    margin: 2px;
+    border: 1px solid #8797AA;
+    font: 12px/1.2 Segoe UI, sans-serif;
+    background: -webkit-linear-gradient(#F0F6FB 0%, #E2EAF3 49%, #D5E0ED 50%, #D7E2EF 100%);
+    background: -moz-linear-gradient(#F0F6FB 0%, #E2EAF3 49%, #D5E0ED 50%, #D7E2EF 100%);
+    background: -o-linear-gradient(#F0F6FB 0%, #E2EAF3 49%, #D5E0ED 50%, #D7E2EF 100%);
+    background: linear-gradient(#F0F6FB 0%, #E2EAF3 49%, #D5E0ED 50%, #D7E2EF 100%);
+    line-height: 25px;
+    border-radius: 3px;
+    color: #1C3759;
+}
+
+    button:hover:not(:disabled) {
+        border-color: #F5D50F;
+        background: -webkit-linear-gradient(#FEF5EB 0%, #FCE3C6 49%, #FBD075 50%, #FCF8CA 100%);
+        background: -moz-linear-gradient(#FEF5EB 0%, #FCE3C6 49%, #FBD075 50%, #FCF8CA 100%);
+        background: -o-linear-gradient(#FEF5EB 0%, #FCE3C6 49%, #FBD075 50%, #FCF8CA 100%);
+        background: linear-gradient(#FEF5EB 0%, #FCE3C6 49%, #FBD075 50%, #FCF8CA 100%);
+    }
+
+#first-btn:hover {
+    background: #D9E4F1;
+    border: 1px solid #8797AA;
+}
+
+#btn-equals {
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    height: 65px;
+}
+
+#btn-zero {
+    width: 82px;
+}
+
+.inactive {
+    background: #D9E4F1;
+}
+
+button:disabled {
+    font-weight: bold;
+    font-size: 13px;
+    border-color: #B4C2D1;
+    background: #D9E4F1;
+}
+
+.digits {
+    background: -webkit-linear-gradient(#F7FBFF 0%, #EDF3F8 49%, #E7EDF5 50%, #F3FBFF 100%);
+    background: -moz-linear-gradient(#F7FBFF 0%, #EDF3F8 49%, #E7EDF5 50%, #F3FBFF 100%);
+    background: -o-linear-gradient(#F7FBFF 0%, #EDF3F8 49%, #E7EDF5 50%, #F3FBFF 100%);
+    background: linear-gradient(#F7FBFF 0%, #EDF3F8 49%, #E7EDF5 50%, #F3FBFF 100%);
+    font-size: 17px;
+}

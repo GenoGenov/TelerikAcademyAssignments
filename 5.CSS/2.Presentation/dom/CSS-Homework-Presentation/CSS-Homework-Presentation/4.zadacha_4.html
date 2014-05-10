@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="4.styles_zadacha_4.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="container-main">
+        <img src="Calculator_Windows_7_Icon.png" width="3%" />
+        <h1>Calculator</h1>
+        <div id="window-main">
+            <div id="menubar">
+                <span class="menu-item">View</span>
+                <span class="menu-item">Edit</span>
+                <span class="menu-item">Help</span>
+            </div>
+            <div id="result">
+                <p id="resultNumber">8854455</p>
+            </div>
+            <div class="bits">
+                <ul id="bits-firstLine" class="clearfix">
+                    <li>0000</li>
+                    <li>0000</li>
+                    <li>0000</li>
+                    <li>0000</li>
+                    <li>0000</li>
+                    <li>0000</li>
+                    <li>0000</li>
+                    <li>0000</li>
+                </ul>
+                <ul id="bits-secondLine" class="clearfix">
+                    <li id="secondLineFirst">63</li>
+                    <li id="secondLineSecond">47</li>
+                    <li>32</li>
+                </ul>
+                <ul id="bits-thirdLine" class="clearfix">
+                    <li>0000</li>
+                    <li>0000</li>
+                    <li>1000</li>
+                    <li>0111</li>
+                    <li>0001</li>
+                    <li>1011</li>
+                    <li>1011</li>
+                    <li>0111</li>
+                </ul>
+                <ul id="bits-fourthLine" class="clearfix">
+                    <li id="fourthLineFirst">31</li>
+                    <li id="fourthLineSecond">15</li>
+                    <li>0</li>
+                </ul>
+            </div>
+            <div id="countSystem-choice">
+                <input type="radio" name="count" value="hex" />Hex
+                <br />
+                <input type="radio" name="count" value="dec" />Dec
+                <br />
+                <input type="radio" name="count" value="oct" />Oct
+                <br />
+                <input type="radio" name="count" value="bin" />Bin
+            </div>
+            <div id="buttons-area">
+                <button id="first-btn" class="inactive" type="button">&nbsp;</button>
+                <button type="button">Mod</button>
+                <button type="button" disabled>A</button>
+                <button class="inactive" type="button">Mc</button>
+                <button class="inactive" type="button">Mr</button>
+                <button class="inactive" type="button">Ms</button>
+                <button class="inactive" type="button">M+</button>
+                <button class="inactive" type="button">M-</button>
+                <br />
+                <button type="button">(</button>
+                <button type="button">)</button>
+                <button type="button" disabled>B</button>
+                <button type="button">←</button>
+                <button type="button">CE</button>
+                <button type="button">C</button>
+                <button type="button">±</button>
+                <button type="button" disabled>√</button>
+                <br />
+                <button type="button">RoL</button>
+                <button type="button">RoR</button>
+                <button type="button" disabled>C</button>
+                <button class="digits" type="button">7</button>
+                <button class="digits" type="button">8</button>
+                <button class="digits" type="button">9</button>
+                <button type="button">/</button>
+                <button type="button" disabled>%</button>
+                <br />
+                <button type="button">Or</button>
+                <button type="button">Xor</button>
+                <button type="button" disabled>D</button>
+                <button class="digits" type="button">4</button>
+                <button class="digits" type="button">5</button>
+                <button class="digits" type="button">6</button>
+                <button type="button">*</button>
+                <button type="button" disabled>1/x</button>
+                <br />
+                <button type="button">Lsh</button>
+                <button type="button">Rsh</button>
+                <button type="button" disabled>E</button>
+                <button class="digits" type="button">1</button>
+                <button class="digits" type="button">2</button>
+                <button class="digits" type="button">3</button>
+                <button type="button">-</button>
+                <button id="btn-equals" type="button">=</button>
+                <br />
+                <button type="button">Not</button>
+                <button type="button">And</button>
+                <button type="button" disabled>F</button>
+                <button id="btn-zero" class="digits" type="button">0</button>
+                <button type="button" disabled>.</button>
+                <button type="button">+</button>
+            </div>
+            <div id="unknown-choice">
+                <input type="radio" name="word" value="Qword" />Qword
+                <br />
+                <input type="radio" name="word" value="Dword" />Dword
+                <br />
+                <input type="radio" name="word" value="Word" />Word
+                <br />
+                <input type="radio" name="word" value="Byte" />Byte
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

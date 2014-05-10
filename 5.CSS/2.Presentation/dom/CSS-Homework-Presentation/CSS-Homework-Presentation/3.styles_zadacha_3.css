@@ -1,0 +1,22 @@
+﻿#base {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    background-color: black;
+    border: 1px solid red;
+    width: 60%;
+    border-radius: 60px;
+    padding-right: 3%;
+}
+
+div:not([id]) {
+    background-color: black;
+    border: 1px solid red;
+    width: 98%;
+    border-radius: 60px;
+    padding-right: 7%;
+    
+}
+
+
+

@@ -1,0 +1,129 @@
+body,
+html,
+p,
+a,
+ul,
+li,
+div,
+h1,
+h2,
+img,
+fieldset,
+form,
+input {
+  padding: 0;
+  margin: 0;
+}
+#wrapper {
+  padding: 25px;
+  width: 960px;
+  font-family: Verdana, Geneva, 'DejaVu Sans', sans-serif;
+  font-size: 16px;
+}
+#wrapper form {
+  border: 1px solid black;
+  border-radius: 15px;
+  width: 390px;
+  padding: 10px;
+  background: #68d1ff;
+  background: -moz-linear-gradient(top, #68d1ff 0%, #8cfffb 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #68d1ff), color-stop(100%, #8cfffb));
+  background: -webkit-linear-gradient(top, #68d1ff 0%, #8cfffb 100%);
+  background: -o-linear-gradient(top, #68d1ff 0%, #8cfffb 100%);
+  background: -ms-linear-gradient(top, #68d1ff 0%, #8cfffb 100%);
+  background: linear-gradient(to bottom, #68d1ff 0%, #8cfffb 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#68d1ff', endColorstr='#8cfffb', GradientType=0);
+  color: #333333;
+  text-align: right;
+  vertical-align: central;
+}
+#wrapper form fieldset {
+  margin: 0 5px;
+  text-align: right;
+  border: 3px solid #333333;
+  border-radius: 5px;
+  color: #333333;
+  padding: 5px 15px;
+}
+#wrapper form fieldset:first-of-type {
+  margin-top: 5px;
+}
+#wrapper form fieldset:nth-of-type(2) {
+  margin-bottom: 5px;
+}
+#wrapper form fieldset legend {
+  padding: 0 15px;
+  color: #333333;
+  font-size: 1.3em;
+  font-style: italic;
+}
+#wrapper form fieldset label {
+  vertical-align: central;
+}
+#wrapper form fieldset input {
+  background: #69d2ff;
+  background: -moz-linear-gradient(top, #69d2ff 0%, #8bfefb 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #69d2ff), color-stop(100%, #8bfefb));
+  background: -webkit-linear-gradient(top, #69d2ff 0%, #8bfefb 100%);
+  background: -o-linear-gradient(top, #69d2ff 0%, #8bfefb 100%);
+  background: -ms-linear-gradient(top, #69d2ff 0%, #8bfefb 100%);
+  background: linear-gradient(to bottom, #69d2ff 0%, #8bfefb 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#69d2ff', endColorstr='#8bfefb', GradientType=0);
+  border: 1px solid #008FCE;
+  border-radius: 5px;
+  line-height: 2em;
+  width: 164px;
+  margin: 0.5px 0;
+  padding-left: 15px;
+  color: #333333;
+}
+#wrapper form fieldset input[type=number] {
+  width: 40px;
+  padding-left: 5px;
+}
+#wrapper form #radio-no {
+  margin-right: 5px;
+}
+#wrapper form button {
+  background: #36c2ff;
+  background: -moz-linear-gradient(top, #36c2ff 0%, #8bfefb 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #36c2ff), color-stop(100%, #8bfefb));
+  background: -webkit-linear-gradient(top, #36c2ff 0%, #8bfefb 100%);
+  background: -o-linear-gradient(top, #36c2ff 0%, #8bfefb 100%);
+  background: -ms-linear-gradient(top, #36c2ff 0%, #8bfefb 100%);
+  background: linear-gradient(to bottom, #36c2ff 0%, #8bfefb 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#36c2ff', endColorstr='#8bfefb', GradientType=0);
+  color: #333333;
+  font-size: 1.2em;
+  width: 140px;
+  border: none;
+  height: 35px;
+  border-bottom: 1px solid black;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+#wrapper form input[type=reset] {
+  background: #36c2ff;
+  background: -moz-linear-gradient(top, #36c2ff 0%, #8bfefb 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #36c2ff), color-stop(100%, #8bfefb));
+  background: -webkit-linear-gradient(top, #36c2ff 0%, #8bfefb 100%);
+  background: -o-linear-gradient(top, #36c2ff 0%, #8bfefb 100%);
+  background: -ms-linear-gradient(top, #36c2ff 0%, #8bfefb 100%);
+  background: linear-gradient(to bottom, #36c2ff 0%, #8bfefb 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#36c2ff', endColorstr='#8bfefb', GradientType=0);
+  color: #333333;
+  font-size: 1.2em;
+  width: 120px;
+  border: none;
+  height: 35px;
+  border-bottom: 1px solid black;
+  border-radius: 5px;
+  margin-top: 15px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+#wrapper form button:hover,
+#wrapper form input[type=reset]:hover {
+  background: #9BE1FF;
+}
+/*# sourceMappingURL=task3.css.map */

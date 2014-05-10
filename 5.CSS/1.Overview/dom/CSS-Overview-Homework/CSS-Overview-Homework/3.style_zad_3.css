@@ -1,0 +1,45 @@
+﻿body {
+    background-color: #B1B3AD;
+}
+header{
+    text-align:center;
+}
+
+ul{
+    list-style:none;
+}
+
+header a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.4rem;
+}
+
+ul li:nth-child(4) a{
+    text-decoration: underline;
+}
+
+.current{
+    background-color:lightgray;
+}
+
+h1{
+    color: white;
+}
+
+article header h1{
+    font-size:1.8rem;
+    text-align:left;
+}
+
+footer a{
+    text-decoration:none;
+    color:black;
+}
+
+body>footer{
+    position:absolute;
+    bottom:0;
+    left:40%;
+    font-size:1.5rem;
+}

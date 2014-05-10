@@ -1,0 +1,60 @@
+﻿table 
+{
+    width:70%;
+    height:40%;
+    border-collapse:collapse;
+}
+
+.firstCol
+{
+    width:30%;
+    border-right:1px solid lightgray;
+}
+.secondCol
+{
+    width:25%;
+    border-right:1px solid lightgray;    
+}
+
+.thirdCol
+{
+    width:25%;
+    border-right:1px solid lightgray;    
+}
+
+.fourthCol
+{
+    width:15%;   
+}
+
+table th
+{ 
+    line-height:38px;
+    padding:5px;
+    background-color:#55b806;
+    text-align:left;
+    font-weight: normal;
+    color:#FFF;
+    padding: 5px;
+    line-height:30px;
+}
+
+
+table tr:nth-child(even)
+{
+    background-color:#ececd8;
+}
+
+
+td
+{
+    line-height:38px;
+    padding:5px;
+
+}
+
+img
+{
+    padding:10px;
+    vertical-align:middle;
+}

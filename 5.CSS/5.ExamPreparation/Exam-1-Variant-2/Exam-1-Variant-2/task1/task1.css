@@ -1,0 +1,235 @@
+body,
+html,
+p,
+a,
+ul,
+li,
+div,
+h1,
+h2 {
+  padding: 0;
+  margin: 0;
+}
+body #wrapper,
+html #wrapper,
+p #wrapper,
+a #wrapper,
+ul #wrapper,
+li #wrapper,
+div #wrapper,
+h1 #wrapper,
+h2 #wrapper {
+  width: 960px;
+  font-family: Helvetica, Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+  font-size: 18px;
+  padding: 50px;
+}
+body #wrapper .accordion,
+html #wrapper .accordion,
+p #wrapper .accordion,
+a #wrapper .accordion,
+ul #wrapper .accordion,
+li #wrapper .accordion,
+div #wrapper .accordion,
+h1 #wrapper .accordion,
+h2 #wrapper .accordion {
+  list-style: none;
+  width: 400px;
+}
+body #wrapper .accordion .accordion-content,
+html #wrapper .accordion .accordion-content,
+p #wrapper .accordion .accordion-content,
+a #wrapper .accordion .accordion-content,
+ul #wrapper .accordion .accordion-content,
+li #wrapper .accordion .accordion-content,
+div #wrapper .accordion .accordion-content,
+h1 #wrapper .accordion .accordion-content,
+h2 #wrapper .accordion .accordion-content {
+  display: none;
+}
+body #wrapper .accordion li,
+html #wrapper .accordion li,
+p #wrapper .accordion li,
+a #wrapper .accordion li,
+ul #wrapper .accordion li,
+li #wrapper .accordion li,
+div #wrapper .accordion li,
+h1 #wrapper .accordion li,
+h2 #wrapper .accordion li {
+  border: 1px solid black;
+}
+body #wrapper .accordion li .accordion-btn,
+html #wrapper .accordion li .accordion-btn,
+p #wrapper .accordion li .accordion-btn,
+a #wrapper .accordion li .accordion-btn,
+ul #wrapper .accordion li .accordion-btn,
+li #wrapper .accordion li .accordion-btn,
+div #wrapper .accordion li .accordion-btn,
+h1 #wrapper .accordion li .accordion-btn,
+h2 #wrapper .accordion li .accordion-btn {
+  background: #aaaaaa;
+  background: -moz-linear-gradient(top, #eeeeee 25%, #aaaaaa 75%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, #eeeeee), color-stop(75%, #aaaaaa));
+  background: -webkit-linear-gradient(top, #eeeeee 25%, #aaaaaa 75%);
+  background: -o-linear-gradient(top, #eeeeee 25%, #aaaaaa 75%);
+  background: -ms-linear-gradient(top, #eeeeee 25%, #aaaaaa 75%);
+  background: linear-gradient(to bottom, #eeeeee 25%, #aaaaaa 75%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#aaaaaa', GradientType=0);
+  display: block;
+  text-decoration: none;
+  font-size: 1.3em;
+  color: #444444;
+  font-weight: bold;
+  text-align: center;
+}
+body #wrapper .accordion li:not(.current):hover .accordion-btn,
+html #wrapper .accordion li:not(.current):hover .accordion-btn,
+p #wrapper .accordion li:not(.current):hover .accordion-btn,
+a #wrapper .accordion li:not(.current):hover .accordion-btn,
+ul #wrapper .accordion li:not(.current):hover .accordion-btn,
+li #wrapper .accordion li:not(.current):hover .accordion-btn,
+div #wrapper .accordion li:not(.current):hover .accordion-btn,
+h1 #wrapper .accordion li:not(.current):hover .accordion-btn,
+h2 #wrapper .accordion li:not(.current):hover .accordion-btn {
+  background: #AAAAAA;
+}
+body #wrapper .accordion .current .accordion-content,
+html #wrapper .accordion .current .accordion-content,
+p #wrapper .accordion .current .accordion-content,
+a #wrapper .accordion .current .accordion-content,
+ul #wrapper .accordion .current .accordion-content,
+li #wrapper .accordion .current .accordion-content,
+div #wrapper .accordion .current .accordion-content,
+h1 #wrapper .accordion .current .accordion-content,
+h2 #wrapper .accordion .current .accordion-content {
+  display: block;
+  padding-left: 15px;
+  background-color: #AAAAAA;
+  padding: 5px 15px;
+  color: #444444;
+  text-align: justify;
+}
+body #wrapper .accordion .current .accordion-content h1,
+html #wrapper .accordion .current .accordion-content h1,
+p #wrapper .accordion .current .accordion-content h1,
+a #wrapper .accordion .current .accordion-content h1,
+ul #wrapper .accordion .current .accordion-content h1,
+li #wrapper .accordion .current .accordion-content h1,
+div #wrapper .accordion .current .accordion-content h1,
+h1 #wrapper .accordion .current .accordion-content h1,
+h2 #wrapper .accordion .current .accordion-content h1 {
+  font-size: 1.6em;
+  text-align: center;
+  margin: 5px auto;
+  color: #5E5E5E;
+}
+body #wrapper .accordion .current .accordion-content table,
+html #wrapper .accordion .current .accordion-content table,
+p #wrapper .accordion .current .accordion-content table,
+a #wrapper .accordion .current .accordion-content table,
+ul #wrapper .accordion .current .accordion-content table,
+li #wrapper .accordion .current .accordion-content table,
+div #wrapper .accordion .current .accordion-content table,
+h1 #wrapper .accordion .current .accordion-content table,
+h2 #wrapper .accordion .current .accordion-content table {
+  border-collapse: collapse;
+  margin: 15px auto;
+}
+body #wrapper .accordion .current .accordion-content table thead,
+html #wrapper .accordion .current .accordion-content table thead,
+p #wrapper .accordion .current .accordion-content table thead,
+a #wrapper .accordion .current .accordion-content table thead,
+ul #wrapper .accordion .current .accordion-content table thead,
+li #wrapper .accordion .current .accordion-content table thead,
+div #wrapper .accordion .current .accordion-content table thead,
+h1 #wrapper .accordion .current .accordion-content table thead,
+h2 #wrapper .accordion .current .accordion-content table thead {
+  background: #ececec;
+  background: -moz-linear-gradient(top, #ececec 0%, #898989 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ececec), color-stop(100%, #898989));
+  background: -webkit-linear-gradient(top, #ececec 0%, #898989 100%);
+  background: -o-linear-gradient(top, #ececec 0%, #898989 100%);
+  background: -ms-linear-gradient(top, #ececec 0%, #898989 100%);
+  background: linear-gradient(to bottom, #ececec 0%, #898989 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ececec', endColorstr='#898989', GradientType=0);
+}
+body #wrapper .accordion .current .accordion-content table thead th:first-of-type,
+html #wrapper .accordion .current .accordion-content table thead th:first-of-type,
+p #wrapper .accordion .current .accordion-content table thead th:first-of-type,
+a #wrapper .accordion .current .accordion-content table thead th:first-of-type,
+ul #wrapper .accordion .current .accordion-content table thead th:first-of-type,
+li #wrapper .accordion .current .accordion-content table thead th:first-of-type,
+div #wrapper .accordion .current .accordion-content table thead th:first-of-type,
+h1 #wrapper .accordion .current .accordion-content table thead th:first-of-type,
+h2 #wrapper .accordion .current .accordion-content table thead th:first-of-type {
+  border-top-left-radius: 15px;
+}
+body #wrapper .accordion .current .accordion-content table td,
+html #wrapper .accordion .current .accordion-content table td,
+p #wrapper .accordion .current .accordion-content table td,
+a #wrapper .accordion .current .accordion-content table td,
+ul #wrapper .accordion .current .accordion-content table td,
+li #wrapper .accordion .current .accordion-content table td,
+div #wrapper .accordion .current .accordion-content table td,
+h1 #wrapper .accordion .current .accordion-content table td,
+h2 #wrapper .accordion .current .accordion-content table td {
+  color: white;
+}
+body #wrapper .accordion .current .accordion-content table td,
+html #wrapper .accordion .current .accordion-content table td,
+p #wrapper .accordion .current .accordion-content table td,
+a #wrapper .accordion .current .accordion-content table td,
+ul #wrapper .accordion .current .accordion-content table td,
+li #wrapper .accordion .current .accordion-content table td,
+div #wrapper .accordion .current .accordion-content table td,
+h1 #wrapper .accordion .current .accordion-content table td,
+h2 #wrapper .accordion .current .accordion-content table td,
+body #wrapper .accordion .current .accordion-content table th,
+html #wrapper .accordion .current .accordion-content table th,
+p #wrapper .accordion .current .accordion-content table th,
+a #wrapper .accordion .current .accordion-content table th,
+ul #wrapper .accordion .current .accordion-content table th,
+li #wrapper .accordion .current .accordion-content table th,
+div #wrapper .accordion .current .accordion-content table th,
+h1 #wrapper .accordion .current .accordion-content table th,
+h2 #wrapper .accordion .current .accordion-content table th {
+  border: 1px solid black;
+  padding: 5px;
+}
+body #wrapper .accordion .current .accordion-content table tbody tr,
+html #wrapper .accordion .current .accordion-content table tbody tr,
+p #wrapper .accordion .current .accordion-content table tbody tr,
+a #wrapper .accordion .current .accordion-content table tbody tr,
+ul #wrapper .accordion .current .accordion-content table tbody tr,
+li #wrapper .accordion .current .accordion-content table tbody tr,
+div #wrapper .accordion .current .accordion-content table tbody tr,
+h1 #wrapper .accordion .current .accordion-content table tbody tr,
+h2 #wrapper .accordion .current .accordion-content table tbody tr {
+  background: #898989;
+  background: -moz-linear-gradient(top, #898989 0%, #cbcbcb 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #898989), color-stop(100%, #cbcbcb));
+  background: -webkit-linear-gradient(top, #898989 0%, #cbcbcb 100%);
+  background: -o-linear-gradient(top, #898989 0%, #cbcbcb 100%);
+  background: -ms-linear-gradient(top, #898989 0%, #cbcbcb 100%);
+  background: linear-gradient(to bottom, #898989 0%, #cbcbcb 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#898989', endColorstr='#cbcbcb', GradientType=0);
+}
+body #wrapper .accordion .current .accordion-content table tbody tr:nth-of-type(2n+1),
+html #wrapper .accordion .current .accordion-content table tbody tr:nth-of-type(2n+1),
+p #wrapper .accordion .current .accordion-content table tbody tr:nth-of-type(2n+1),
+a #wrapper .accordion .current .accordion-content table tbody tr:nth-of-type(2n+1),
+ul #wrapper .accordion .current .accordion-content table tbody tr:nth-of-type(2n+1),
+li #wrapper .accordion .current .accordion-content table tbody tr:nth-of-type(2n+1),
+div #wrapper .accordion .current .accordion-content table tbody tr:nth-of-type(2n+1),
+h1 #wrapper .accordion .current .accordion-content table tbody tr:nth-of-type(2n+1),
+h2 #wrapper .accordion .current .accordion-content table tbody tr:nth-of-type(2n+1) {
+  background: #cbcbcb;
+  background: -moz-linear-gradient(top, #cbcbcb 0%, #898989 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #cbcbcb), color-stop(100%, #898989));
+  background: -webkit-linear-gradient(top, #cbcbcb 0%, #898989 100%);
+  background: -o-linear-gradient(top, #cbcbcb 0%, #898989 100%);
+  background: -ms-linear-gradient(top, #cbcbcb 0%, #898989 100%);
+  background: linear-gradient(to bottom, #cbcbcb 0%, #898989 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cbcbcb', endColorstr='#898989', GradientType=0);
+}
+/*# sourceMappingURL=task1.css.map */

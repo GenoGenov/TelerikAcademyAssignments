@@ -1,0 +1,73 @@
+﻿div, ul, li, a, header, body, html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 960px;
+    height: 200px;
+}
+
+#wrapper {
+    padding: 50px;
+    background: #002d44;
+    background: -moz-linear-gradient(top, #002d44 0%, #77d1ff 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#002d44), color-stop(100%,#77d1ff));
+    background: -webkit-linear-gradient(top, #002d44 0%,#77d1ff 100%);
+    background: -o-linear-gradient(top, #002d44 0%,#77d1ff 100%);
+    background: -ms-linear-gradient(top, #002d44 0%,#77d1ff 100%);
+    background: linear-gradient(to bottom, #002d44 0%,#77d1ff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002d44', endColorstr='#77d1ff',GradientType=0 );
+}
+
+a {
+    margin:5px;
+    text-decoration: none;
+    color: black;
+    font-size: 32px;
+    font-family: Arial;
+}
+
+li {
+    padding: 5px;
+    margin-right: 15px;
+    border-radius: 15px;
+    &:hover{
+        background-color: rgba(12%, 40%, 54%,0.8);
+    }
+}
+
+nav ul {
+    list-style: none;
+
+    a, li {
+        display: inline-block;
+    }
+
+        li.selected {
+            background-color: rgba(9%, 28%, 37%,0.8);
+            ul {
+                position: absolute;
+                display: inline-block;
+                left: 50px;
+
+                li ul {
+                    display: none;
+                }
+
+                li:hover ul {
+                    display: block;
+                    position: absolute;
+                    left: 0;
+
+                    li {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        li ul {
+            display: none;
+        }
+}
