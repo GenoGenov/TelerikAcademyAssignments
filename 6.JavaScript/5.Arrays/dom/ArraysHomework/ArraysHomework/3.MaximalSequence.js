@@ -4,6 +4,7 @@ var max = arr[0];
 var current;
 var curArr = [];
 var maxArr = [];
+
 for (var i = 0; i < arr.length - 1; i++) {
     current = arr[i];
     curArr.push(arr[i]);
@@ -17,15 +18,15 @@ for (var i = 0; i < arr.length - 1; i++) {
             if (current > max) {
                 max = current;
             }
-        }
-        else {
+        } else {
             if (current >= max) {
                 maxArr = curArr;
             }
             curArr = [];
             break;
         }
-
     }
 }
 console.log(maxArr);
+
+console.log();
