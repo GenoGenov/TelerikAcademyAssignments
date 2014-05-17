@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{B8FE0428-6768-4752-B29C-1044F609072D}</ProjectGuid>
+    <ProjectGuid>{5D74EBE1-0636-4509-A25A-887AA89628F8}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ArraysHomework</RootNamespace>
-    <AssemblyName>ArraysHomework</AssemblyName>
+    <RootNamespace>FunctionsHomework</RootNamespace>
+    <AssemblyName>FunctionsHomework</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -57,12 +57,13 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="1.InitializeArray.js" />
-    <Content Include="2.CompareCharArrays.js" />
-    <Content Include="3.MaximalSequence.js" />
-    <Content Include="5.SelectionSort.js" />
-    <Content Include="6.MostFrequentNumber.js" />
-    <Content Include="7.BinarySearch.js" />
+    <Content Include="1.LastDigitOfNumber.js" />
+    <Content Include="2.ReverseDigits.js" />
+    <Content Include="3.FindAllOccurrencesOfWord.js" />
+    <Content Include="4.NumberOfDivs.js" />
+    <Content Include="5.OccurrenceCountOfNumber.js" />
+    <Content Include="6.CheckIfBiggerThanNeighbors.js" />
+    <Content Include="7.FirstBiggerThanNeighbors.js" />
     <Content Include="test.html" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -70,7 +71,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="4.MaximalIncreasingSeq.js" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -91,9 +91,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>6070</DevelopmentServerPort>
+          <DevelopmentServerPort>2300</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:6070/</IISUrl>
+          <IISUrl>http://localhost:2300/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
