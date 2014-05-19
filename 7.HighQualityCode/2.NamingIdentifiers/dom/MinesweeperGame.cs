@@ -5,10 +5,17 @@
     using System.Linq;
     using System.Text;
 
+    /// <summary>
+    /// 
+    /// </summary>
     public class MinesweeperGame
     {
         private const int MAX_POINTS = 35;
 
+        /// <summary>
+        /// afgjwhegekwhfkjwehfgjklwehgfklew
+        /// </summary>
+        /// <param name="args">wegwegwegew</param>
         private static void Main(string[] args)
         {
             string command = string.Empty;
@@ -341,20 +348,37 @@
             return char.Parse(minesCount.ToString());
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public class PointsRecord
         {
+            /// <summary>
+            /// 
+            /// </summary>
             public PointsRecord()
             {
             }
 
+            /// <summary>
+            /// 
+            /// </summary>
+            /// <param name="name"></param>
+            /// <param name="points"></param>
             public PointsRecord(string name, int points)
             {
                 this.Name = name;
                 this.Points = points;
             }
 
+            /// <summary>
+            /// 
+            /// </summary>
             public string Name { get; set; }
 
+            /// <summary>
+            /// 
+            /// </summary>
             public int Points { get; set; }
         }
     }
