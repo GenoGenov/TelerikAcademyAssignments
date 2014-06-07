@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="scripts/sizzle.min.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="text">this should have green border</div>
+    </div>
+    <script>
+        window.onload = function () {
+            //if (!document.querySelector || !document.querySelectorAll) {
+                document.querySelector = function (selector) {
+                    return Sizzle[selector][0];
+                };
+                document.querySelectorAll = function (selector) {
+                    return Sizzle[selector];
+                };
+           // }
+        }
+
+    </script>
+    <script src="scripts/4.query-selectors-shim-tests.js"></script>
+</body>
+</html>
