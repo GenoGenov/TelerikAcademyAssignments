@@ -1,0 +1,33 @@
+﻿canvas {
+    display: block;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+#wrapper {
+    margin-top:5px;
+}
+
+h1, h2 {
+    text-align:center;
+}
+
+#startNewGameBtn {
+    display:block;
+    margin:0 auto;
+    height:80px;
+}
+
+#fastenBtn {
+    display:block;
+}
+
+#float {
+    position:absolute;
+    display:inline-block;
+    float:left;
+}
+
+span {
+    display:block;
+}
