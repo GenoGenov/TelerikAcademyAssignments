@@ -1,0 +1,65 @@
+﻿#to-do-list {
+  position: relative;
+  width: 400px;
+  margin: 150px auto;
+  border: 1px solid black;
+}
+#to-do-list span {
+  display: block;
+}
+#to-do-list ul {
+  display: block;
+  background-color: #F9EBAA;
+  padding-left: 2px;
+}
+#to-do-list ul li {
+  padding: 0;
+  margin-bottom: 5px;
+  border-bottom: 1px solid gray;
+  list-style-position: inside;
+  position: relative;
+}
+#to-do-list ul li .list-item-content {
+  display: inline-block;
+  vertical-align: super;
+}
+#to-do-list ul li.list-style-pending {
+  list-style-image: url(list-style-pending.png);
+}
+#to-do-list ul li.list-style-pending .mark-completed {
+  position: relative;
+  display: inline-block;
+  float: right;
+  width: 20px;
+  height: 27px;
+  background: none;
+  border: none;
+  background-image: url(list-style-completed.png);
+  background-repeat: no-repeat;
+}
+#to-do-list ul li.list-style-pending .mark-completed:hover {
+  margin: 5px;
+  background-color: #f6dc63;
+}
+#to-do-list ul li.list-style-completed {
+  list-style-image: url(list-style-completed.png);
+}
+#to-do-list ul li.list-style-completed .mark-completed {
+  display: none;
+}
+#to-do-list ul li .delete-list-item {
+  position: relative;
+  display: inline-block;
+  float: right;
+  width: 20px;
+  height: 27px;
+  background: none;
+  border: none;
+  background-image: url(delete-list-item.png);
+  background-repeat: no-repeat;
+}
+#to-do-list ul li .delete-list-item:hover {
+  margin: 5px;
+  background-color: #f6dc63;
+}
+/*# sourceMappingURL=styles.css.map */
