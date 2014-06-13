@@ -72,6 +72,7 @@
     <Content Include="scripts\4.change-background-color.js" />
     <Content Include="scripts\5.gridview.js" />
     <Content Include="scripts\jquery-2.1.1.min.js" />
+    <None Include="scripts\_references.js" />
     <Content Include="styles\1.slider-control.css" />
     <Content Include="styles\3.table.css" />
     <Content Include="styles\5.gridview.css" />

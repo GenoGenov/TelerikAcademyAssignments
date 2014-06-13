@@ -81,7 +81,7 @@
 
     function createGridView(element, colCount, index) {
         var grid = $('<table class="grid' + index + '">').append('<thead>');
-
+        
         createRowForm(grid, colCount, index);
         grid.appendTo(element);
     }
