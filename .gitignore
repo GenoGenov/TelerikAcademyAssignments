@@ -15,6 +15,7 @@ local.properties
 .classpath
 .settings/
 .loadpath
+_references.js
 
 # External tool builders
 .externalToolBuilders/
