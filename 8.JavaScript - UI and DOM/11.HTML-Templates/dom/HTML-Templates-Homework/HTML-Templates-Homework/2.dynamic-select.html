@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Scripts/libs/jquery-2.1.1.min.js"></script>
+    <script src="Scripts/libs/handlebars.min.js"></script>
+</head>
+<body>
+    <script id="dynamic-select" type="text/x-handlebars-template">
+        <select id="dynamic">
+            {{#each items}}
+            <option value="{{value}}">{{text}}</option>
+            {{/each}}
+        </select>
+    </script>
+    <script src="Scripts/2.dynamic-select.js"></script>
+</body>
+</html>
