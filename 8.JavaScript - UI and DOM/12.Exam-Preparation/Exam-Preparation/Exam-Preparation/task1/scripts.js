@@ -39,7 +39,7 @@ function createCalendar(selector, events) {
 
             var date = ev.target.firstElementChild;
             date.style.backgroundColor = '';
-            ev.target.style.backgroundColor = 'gold';
+            ev.target.style.backgroundColor = 'silver';
             selected = ev.target;
             selected.className += ' selected';
         }
