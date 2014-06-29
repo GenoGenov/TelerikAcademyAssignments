@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" ?>
+<project>
+	<file>App.config</file>
+	<file>Dev-Tools-Homework.csproj</file>
+	<file>Dev-Tools-Homework.csproj.user</file>
+	<file>LoggingDemo.cs</file>
+	<file>packages.config</file>
+	<file>SimpleTemplate.tt</file>
+	<file>SimpleTemplate.xml</file>
+	<file>StyleCop.Cache</file>
+</project>
+

@@ -11,6 +11,7 @@
     <AssemblyName>Dev-Tools-Homework</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -53,12 +54,28 @@
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="SimpleTemplate.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SimpleTemplate.xml</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Public Project Link.txt" />
+    <Content Include="ScreenShtots\GitHubExample.png" />
     <Content Include="ScreenShtots\JustCodeExample.png" />
     <Content Include="ScreenShtots\JustDecompileExample.png" />
+    <Content Include="ScreenShtots\ObfuscatorExample1.png" />
+    <Content Include="ScreenShtots\ObfuscatorExample2.png" />
     <Content Include="ScreenShtots\SandCastleExample.png" />
     <Content Include="ScreenShtots\StyleCopExample.png" />
+    <Content Include="SimpleTemplate.xml">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SimpleTemplate.tt</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -68,4 +85,7 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <PropertyGroup>
+    <PostBuildEvent>if /I "$(ConfigurationName)" == "Release" Eazfuscator.NET.exe "$(TargetPath)" --msbuild-project-path "$(ProjectPath)" --msbuild-project-configuration "$(ConfigurationName)" --msbuild-project-platform "$(PlatformName)" --msbuild-solution-path "$(SolutionPath)" -n --newline-flush -v 4.4</PostBuildEvent>
+  </PropertyGroup>
 </Project>
