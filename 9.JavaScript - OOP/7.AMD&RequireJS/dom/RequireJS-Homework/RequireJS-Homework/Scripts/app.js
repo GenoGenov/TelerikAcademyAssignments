@@ -2,8 +2,17 @@
     require.config({
         paths: {
             'jquery': 'libs/jquery-2.1.1',
-            'handlebars': 'libs/handlebars'
+            'handlebars': 'libs/handlebars',
+        },
+        shim: {
+        'handlebars': {
+                exports: 'Handlebars',
+                init: function() {
+                    this.Handlebars = Handlebars;
+                    return this.Handlebars;
+                }
         }
+    }
 
     });
 

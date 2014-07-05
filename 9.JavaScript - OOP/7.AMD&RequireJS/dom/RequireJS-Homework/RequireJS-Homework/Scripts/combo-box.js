@@ -1,5 +1,5 @@
 ﻿var controls = controls || {};
-define(['jquery', 'handlebars'], function($) {
+define(['jquery', 'handlebars'], function($, Handlebars) {
     controls.ComboBox = (function(items) {
         var compiledHtml;
 
