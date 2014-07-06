@@ -1,0 +1,1 @@
+﻿//# sourceMappingURL=IBattery.js.map
