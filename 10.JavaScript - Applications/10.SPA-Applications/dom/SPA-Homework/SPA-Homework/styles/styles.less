@@ -1,0 +1,80 @@
+﻿body {
+    .error {
+        font-size: 22px;
+        margin: 40px auto;
+        text-align: center;
+        color: red;
+        display:inline-block;
+    }
+
+    #app-main {
+
+        button {
+            display: block;
+            width: 140px;
+            height: 30px;
+            background: none;
+            border: 1px solid black;
+            border-radius: 15px;
+            margin: 30px auto;
+
+            &:hover {
+                background-color: dodgerblue;
+            }
+        }
+
+        #home {
+            text-align: center;
+        }
+
+        #login-page {
+            text-align: center;
+        }
+
+        #chat {
+
+            #messages {
+                display:block;
+                font-family: Helvetica, sans-serif;
+                font-size: 16px;
+                max-height:500px;
+                overflow-x: hidden;
+                overflow-y:scroll;
+
+                .message {
+                    background-color: aquamarine;
+                    border: 1px solid black;
+                    margin: 5px;
+                    border-radius: 15px;
+                    display: inline-block;
+
+                    .message-author {
+                        display: inline-block;
+                        color: #333;
+
+                        &:after {
+                            content: ' :';
+                        }
+                    }
+
+                    .message-text {
+                        display: inline-block;
+                        border-radius: 20px;
+                        color: #333;
+                        padding: 15px;
+                        margin: 10px;
+                    }
+                }
+            }
+
+            #send{
+                background-color:ActiveCaption;
+                #send-btn{
+                    display:inline-block;
+                    margin-top:10px;
+                    margin-bottom:10px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,62 @@
+﻿body .error {
+  font-size: 22px;
+  margin: 40px auto;
+  text-align: center;
+  color: red;
+  display: inline-block;
+}
+body #app-main button {
+  display: block;
+  width: 140px;
+  height: 30px;
+  background: none;
+  border: 1px solid black;
+  border-radius: 15px;
+  margin: 30px auto;
+}
+body #app-main button:hover {
+  background-color: dodgerblue;
+}
+body #app-main #home {
+  text-align: center;
+}
+body #app-main #login-page {
+  text-align: center;
+}
+body #app-main #chat #messages {
+  display: block;
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  max-height: 500px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+body #app-main #chat #messages .message {
+  background-color: aquamarine;
+  border: 1px solid black;
+  margin: 5px;
+  border-radius: 15px;
+  display: inline-block;
+}
+body #app-main #chat #messages .message .message-author {
+  display: inline-block;
+  color: #333;
+}
+body #app-main #chat #messages .message .message-author:after {
+  content: ' :';
+}
+body #app-main #chat #messages .message .message-text {
+  display: inline-block;
+  border-radius: 20px;
+  color: #333;
+  padding: 15px;
+  margin: 10px;
+}
+body #app-main #chat #send {
+  background-color: ActiveCaption;
+}
+body #app-main #chat #send #send-btn {
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
