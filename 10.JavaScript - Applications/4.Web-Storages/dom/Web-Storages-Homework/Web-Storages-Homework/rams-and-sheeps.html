@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="Styles/rams-and-sheep.css" rel="stylesheet" />
+    <script src="Scripts/jquery-2.1.1.min.js"></script>
+    <script src="rams-and-sheeps.js"></script>
+</head>
+<body>
+    <div id="game-container">
+        <div id="game">
+            <div id="banner"></div>
+            <div id="user-input">
+                <input type="text" pattern="\d*" maxlength="1" class="input-field" tabindex="1">
+                <input type="text" pattern="\d*" maxlength="1" class="input-field" tabindex="2">
+                <input type="text" pattern="\d*" maxlength="1" class="input-field" tabindex="3">
+                <input type="text" pattern="\d*" maxlength="1" class="input-field" tabindex="4">
+            </div>
+            <button id="submit-btn"></button>
+            <div id="turns-log">
+                <ul id="log-list"></ul>
+            </div>
+        </div>
+        
+        <div id="score-form">
+            <h1>You won with <span id="score"></span> guesses!</h1>
+            <h2> Please enter your name for the High Score:</h2>
+            <input type="text" id="name-input"/>
+            <button id="get-name">Submit</button>
+            <button id="start-new">New Game</button>
+        </div>
+    </div>
+    <script>
+        $('#game-container').ramsAndSheeps();
+    </script>
+</body>
+</html>
