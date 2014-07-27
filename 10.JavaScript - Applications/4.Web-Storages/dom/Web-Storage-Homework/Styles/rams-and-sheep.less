@@ -1,0 +1,152 @@
+﻿div, ul, li, h1, h2, h3, a, p, img {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    #game-container {
+        height:100%;
+        #game {
+            position: relative;
+            margin: 0 auto;
+            border: 1px solid black;
+            border-radius: 15px;
+            width: 45%;
+            height: 100%;
+            background-color: #f0e3b7;
+
+            #banner {
+                background-color: #66787d;
+                background-image: url(../Images/picture.png), url(../Images/name.png);
+                background-size: 50% 100%, 65% 80%;
+                background-position-x: right, left;
+                background-position-y: 0,90%;
+                background-repeat: no-repeat, no-repeat;
+                height: 100px;
+                border-bottom: 1px solid black;
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+                margin-bottom: 5%;
+            }
+
+            &.disabled {
+                -webkit-filter: blur(4px);
+                -moz-filter: blur(4px);
+                -o-filter: blur(4px);
+                -ms-filter: blur(4px);
+                filter: blur(4px);
+                z-index: 100;
+                pointer-events: none;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+
+            #user-input {
+                display: inline-block;
+                width: 60%;
+                margin-left: 10%;
+                margin-top: 2%;
+
+                .input-field {
+                    display: inline-block;
+                    margin-right: 2px;
+                    width: 23%;
+                    height: 30px;
+                    border-radius: 15px;
+                    border: 1px solid grey;
+                    text-align: center;
+                    font-size: 16px;
+                }
+            }
+
+            #submit-btn {
+                cursor: pointer;
+                position: absolute;
+                display: inline-block;
+                padding: 0;
+                background-color: transparent;
+                background-image: url(../Images/guess.png);
+                background-size: 200%;
+                background-position-y: 50%;
+                background-position-x: 50%;
+                width: 60px;
+                height: 50px;
+                border: 0;
+                margin-left: 10px;
+            }
+
+            #turns-log {
+                width: 70%;
+                margin: 5% auto;
+                height:300px;
+                overflow:auto;
+                #log-list {
+                    list-style-type: none;
+
+                    .log-item {
+                        font-family: Helvetica, sans-serif;
+                        font-weight: bold;
+                        border-top: 1px solid black;
+                        border-right: none;
+                        border-left: none;
+                        text-align: center;
+
+                        &:last-of-type {
+                            border-bottom: 1px solid black;
+                        }
+
+                        .numbers {
+                            display: inline-block;
+                            margin-left: 10px;
+                            color: #66787D;
+                        }
+
+                        .info {
+                            color: #333;
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        #score-form {
+            font-family:Helvetica, sans-serif;
+            text-align:center;
+            background-color:white;
+            position: absolute;
+            top:37%;
+            width: 100%;
+            height: 30%;
+            z-index:999;
+            color:#66787D;
+
+            h1{
+                margin:5px;
+            }
+
+            #get-name,#start-new{
+                color:#333;
+                font-size:22px;
+                background:none;
+                border-radius:40px;
+                border-style:none;
+                border:1px solid #66787D;
+
+                &:hover{
+                    background-color:#9AC6C9;
+                }
+            }
+            #start-new{
+                display:block;
+                margin:20px auto;
+            }
+        }
+    }
+}
