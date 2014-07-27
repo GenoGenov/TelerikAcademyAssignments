@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="scripts/1.HTTP-module.js"></script>
+    <style>
+    #info {
+        display: inline-block;
+        margin: 0 auto;
+        font-size: 22px;
+        border: 1px solid black;
+        text-align: center;
+    }
+    #info h1 {
+        color: orangered;
+    }
+    </style>
+</head>
+    <body>
+        <h1>You can see the the responces details below:</h1>
+        <div id="info"></div>
+        <script>
+            httpWorker.getJSON('https://api.github.com/',
+            {
+                display: document.getElementById('info')
+            });
+            httpWorker.postJSON('https://api.github.com/',
+            {
+                display: document.getElementById('info')
+            });
+        </script>
+    </body>
+</html>
