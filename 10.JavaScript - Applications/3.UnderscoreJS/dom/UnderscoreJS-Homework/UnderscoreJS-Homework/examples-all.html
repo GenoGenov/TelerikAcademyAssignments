@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="styles/tabs-styles.css" rel="stylesheet" />
+    <script src="Scripts/libs/require.js" data-main="Scripts/app"></script>
+</head>
+    <body>
+        <script type="template/x-handlebars" id="template"> 
+        <div id="root">
+            <div id="tabs-container">
+                {{#each items}}
+                <div class="tab-item">
+                    <strong class="tab-item-title">{{title}}</strong>
+                    <div class="tab-item-content">
+                        <p>{{summary}}</p>
+                        <div class="content">
+                            <strong>Initial collection: </strong>
+                            {{#each initial}}
+                            <ul>
+                                {{#each this}}
+                                <li>{{@key}}: {{this}}</li>
+                                {{/each}}
+                            </ul>
+                            {{/each}}
+                            <strong>Calculated result :</strong>
+                            {{#if result.simple}}
+                            <p>{{result.value}}</p>
+                            {{else}}
+                            {{#each result}}
+                            <ul>
+                                <li>{{@key}}: {{this}}</li>
+                                {{#each this}}
+                                <li>
+                                    {{@key}}:
+                                    {{#each this}}
+                                        {{this}}
+                                    {{/each}}
+                                </li>
+                                {{/each}}
+                            </ul>
+                            {{/each}}
+                            {{/if}}
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+
+            </div>
+        </div>
+    
+    </script>
+        <div id="intro"><h1>Click on each task to see the initial data and the calculated result. The results for each task are also available in the console.</h1></div>
+    </body>
+</html>
