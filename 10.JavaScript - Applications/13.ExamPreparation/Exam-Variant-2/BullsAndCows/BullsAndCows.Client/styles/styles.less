@@ -1,0 +1,177 @@
+﻿body, html, div, h1, h2, h3, h4, button, section, footer, table {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    .error {
+        font-size: 22px;
+        margin: 40px auto;
+        text-align: center;
+        color: red;
+        display: inline-block;
+    }
+
+    #content-main {
+        font-family: Helvetica, sans-serif;
+        height: 100%;
+
+        button {
+            display: inline-block;
+            background: none;
+            border: 1px solid black;
+            border-radius: 15px;
+            margin: 15px auto;
+            padding: 7px;
+
+            &:hover {
+                background-color: dodgerblue;
+            }
+        }
+
+        #login-page, #register-page {
+            height: 100%;
+            background-color: rgba(151, 3, 211, 0.84);
+            text-align: center;
+
+            input {
+                border-radius: 8px;
+            }
+        }
+
+        #ui-main {
+            height: 100%;
+            background-color: rgba(151, 3, 211, 0.84);
+
+            h2 {
+                text-align: left;
+                display: inline-block;
+                overflow: hidden;
+                margin-bottom:20px;
+            }
+
+            #logout-btn {
+                position: absolute;
+                top: 0;
+                right: 0;
+                margin: 0;
+                padding: 20px;
+            }
+
+            #content {
+                #games-active{
+                    position:relative;
+                    float:left;
+                    overflow: auto;
+                    height: 400px;
+                    width:30%;
+                    &:before{
+                        content:'My Active Games';
+                        font-size:24px;
+                        color:cadetblue;
+                    }
+                }
+
+                #games-open {
+                    position:relative;
+                    float:left;
+                    overflow: auto;
+                    height: 400px;
+                    width:30%;
+
+                    &:before{
+                        content:'Open Games';
+                        font-size:24px;
+                        color:cadetblue;
+                    }
+                    
+                }
+
+                .game-item {
+                        position:relative;
+                        border: 1px solid #333;
+                        margin-bottom: 10px;
+
+                        span {
+                            display: block;
+                        }
+
+                        .game-id:before {
+                            content: 'Game ID: ';
+                        }
+
+                        .game-title:before {
+                            content: 'Game Title: ';
+                        }
+
+                        .game-creator:before {
+                            content: 'Creator: ';
+                        }
+
+                        .join,.start{
+                            position:absolute;
+                            top:10%;
+                            right:0;
+                            margin:5px;
+                        }
+
+                        label{
+                            display:block;
+                        }
+                    }
+                
+            }
+        }
+
+        #chat {
+
+            #messages {
+                display: block;
+                font-family: Helvetica, sans-serif;
+                font-size: 16px;
+                max-height: 500px;
+                overflow-x: hidden;
+                overflow-y: scroll;
+
+                .message {
+                    background-color: aquamarine;
+                    border: 1px solid black;
+                    margin: 5px;
+                    border-radius: 15px;
+                    display: inline-block;
+
+                    .message-author {
+                        display: inline-block;
+                        color: #333;
+
+                        &:after {
+                            content: ' :';
+                        }
+                    }
+
+                    .message-text {
+                        display: inline-block;
+                        border-radius: 20px;
+                        color: #333;
+                        padding: 15px;
+                        margin: 10px;
+                    }
+                }
+            }
+
+            #send {
+                background-color: ActiveCaption;
+
+                #send-btn {
+                    display: inline-block;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}

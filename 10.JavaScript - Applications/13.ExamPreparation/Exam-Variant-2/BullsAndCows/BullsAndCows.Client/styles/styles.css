@@ -1,0 +1,155 @@
+﻿body,
+html,
+div,
+h1,
+h2,
+h3,
+h4,
+button,
+section,
+footer,
+table {
+  margin: 0;
+  padding: 0;
+}
+body,
+html {
+  height: 100%;
+}
+body .error {
+  font-size: 22px;
+  margin: 40px auto;
+  text-align: center;
+  color: red;
+  display: inline-block;
+}
+body #content-main {
+  font-family: Helvetica, sans-serif;
+  height: 100%;
+}
+body #content-main button {
+  display: inline-block;
+  background: none;
+  border: 1px solid black;
+  border-radius: 15px;
+  margin: 15px auto;
+  padding: 7px;
+}
+body #content-main button:hover {
+  background-color: dodgerblue;
+}
+body #content-main #login-page,
+body #content-main #register-page {
+  height: 100%;
+  background-color: rgba(151, 3, 211, 0.84);
+  text-align: center;
+}
+body #content-main #login-page input,
+body #content-main #register-page input {
+  border-radius: 8px;
+}
+body #content-main #ui-main {
+  height: 100%;
+  background-color: rgba(151, 3, 211, 0.84);
+}
+body #content-main #ui-main h2 {
+  text-align: left;
+  display: inline-block;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+body #content-main #ui-main #logout-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 20px;
+}
+body #content-main #ui-main #content #games-active {
+  position: relative;
+  float: left;
+  overflow: auto;
+  height: 400px;
+  width: 30%;
+}
+body #content-main #ui-main #content #games-active:before {
+  content: 'My Active Games';
+  font-size: 24px;
+  color: cadetblue;
+}
+body #content-main #ui-main #content #games-open {
+  position: relative;
+  float: left;
+  overflow: auto;
+  height: 400px;
+  width: 30%;
+}
+body #content-main #ui-main #content #games-open:before {
+  content: 'Open Games';
+  font-size: 24px;
+  color: cadetblue;
+}
+body #content-main #ui-main #content .game-item {
+  position: relative;
+  border: 1px solid #333;
+  margin-bottom: 10px;
+}
+body #content-main #ui-main #content .game-item span {
+  display: block;
+}
+body #content-main #ui-main #content .game-item .game-id:before {
+  content: 'Game ID: ';
+}
+body #content-main #ui-main #content .game-item .game-title:before {
+  content: 'Game Title: ';
+}
+body #content-main #ui-main #content .game-item .game-creator:before {
+  content: 'Creator: ';
+}
+body #content-main #ui-main #content .game-item .join,
+body #content-main #ui-main #content .game-item .start {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  margin: 5px;
+}
+body #content-main #ui-main #content .game-item label {
+  display: block;
+}
+body #content-main #chat #messages {
+  display: block;
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  max-height: 500px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+body #content-main #chat #messages .message {
+  background-color: aquamarine;
+  border: 1px solid black;
+  margin: 5px;
+  border-radius: 15px;
+  display: inline-block;
+}
+body #content-main #chat #messages .message .message-author {
+  display: inline-block;
+  color: #333;
+}
+body #content-main #chat #messages .message .message-author:after {
+  content: ' :';
+}
+body #content-main #chat #messages .message .message-text {
+  display: inline-block;
+  border-radius: 20px;
+  color: #333;
+  padding: 15px;
+  margin: 10px;
+}
+body #content-main #chat #send {
+  background-color: ActiveCaption;
+}
+body #content-main #chat #send #send-btn {
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
