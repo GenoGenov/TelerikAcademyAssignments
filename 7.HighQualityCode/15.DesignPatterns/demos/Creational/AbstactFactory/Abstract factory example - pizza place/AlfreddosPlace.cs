@@ -4,13 +4,13 @@
 
     public class AlfreddosPlace : PizzaFactory
     {
-        private const string name = "Alfreddo's Pizza Palace";
+        private const string Name = "Alfreddo's Pizza Palace";
 
-        public string Name
+        public string TheName
         {
             get
             {
-                return name;
+                return Name;
             }
         }
 
@@ -23,7 +23,7 @@
             ingridients.Add("blue cheese");
             ingridients.Add("extra smelly cheese");
 
-            var pizza = new CheesePizza(ingridients, this.Name);
+            var pizza = new CheesePizza(ingridients, this.TheName);
             return pizza;
         }
 
@@ -34,7 +34,7 @@
             ingridients.Add("ham");
             ingridients.Add("bacon");
 
-            var pizza = new Calzone(ingridients, this.Name);
+            var pizza = new Calzone(ingridients, this.TheName);
             return pizza;
         }
 
@@ -45,7 +45,7 @@
             ingridients.Add("pepperoni");
             ingridients.Add("salami");
 
-            var pizza = new PepperoniPizza(ingridients, this.Name);
+            var pizza = new PepperoniPizza(ingridients, this.TheName);
             return pizza;
         }
     }

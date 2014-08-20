@@ -4,7 +4,7 @@
 
     public class Calzone : Pizza
     {
-        private string madeBy;
+        private readonly string madeBy;
 
         public Calzone(IEnumerable<string> ingridients, string madeBy)
             : base(ingridients)
@@ -16,7 +16,7 @@
         {
             get
             {
-                return string.Format("Calzone made by {0}", madeBy);
+                return string.Format("Calzone made by {0}", this.madeBy);
             }
         }
     }
