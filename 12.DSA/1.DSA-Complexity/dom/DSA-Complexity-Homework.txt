@@ -1,0 +1,15 @@
+1.
+O(n*n) - outer for is executed n times.
+In the inner cycle we have initial n steps, same as the outer cycle (start - 0, end - n-1)
+On each step either start is incremented or end is reduced by 1.
+So we get again n steps in the inner while => O(n*n)
+
+2.
+O(n*(m-e)) where e-the number of even numbers, which are the first element of each row.
+So in the best case we will have n*(m-m)=0 and in the worst case n*(m-0)=n*m => 0(n*m)
+
+3.
+O(n*m) - for each step of the for cycle we call recursively the same function and that is repeated for
+each row of the matrix. So we have for cycle - n steps, and m recursion calls to that same for cycle.
+So => O(n*m) - best case if m<n and worst case O(n^2)
+=> O(n^2)
