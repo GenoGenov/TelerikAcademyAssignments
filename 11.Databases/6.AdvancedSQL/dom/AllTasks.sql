@@ -27,10 +27,10 @@ GO
 	--WHERE DepartmentID=1
 
 --5.Write a SQL query to find the average salary  in the "Sales" department.
-	--SELECT AVG(Salary) FROM Employees
-	--WHERE DepartmentID=
-	--(SELECT DepartmentID FROM Departments
-	--WHERE Name='Sales')
+	SELECT AVG(Salary) FROM Employees
+	WHERE DepartmentID=
+	(SELECT DepartmentID FROM Departments
+	WHERE Name='Sales')
 
 --6.Write a SQL query to find the number of employees in the "Sales" department.
 	--SELECT COUNT(*) FROM Employees
@@ -39,8 +39,8 @@ GO
 	--WHERE Name='Sales')
 
 --7.Write a SQL query to find the number of all employees that have manager.
-	--SELECT COUNT(*) FROM Employees
-	--WHERE ManagerID IS NOT NULL
+	SELECT COUNT(*) FROM Employees
+	WHERE ManagerID IS NOT NULL
 
 --8.Write a SQL query to find the number of all employees that have no manager.
 	--SELECT COUNT(*) FROM Employees
