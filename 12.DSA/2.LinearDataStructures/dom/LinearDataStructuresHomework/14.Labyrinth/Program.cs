@@ -3,11 +3,14 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using Wintellect.PowerCollections;
 
     internal class Program
     {
         private static void BFS(ref string[,] arr, AllowedCoords start)
         {
+
+            var set = new Set<int>();
             var queue = new Queue<AllowedCoords>();
             var set = new HashSet<AllowedCoords>();
             int depth = 1;
