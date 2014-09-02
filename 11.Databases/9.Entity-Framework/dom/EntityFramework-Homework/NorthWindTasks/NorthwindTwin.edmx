@@ -1,0 +1,604 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Namespace="NorthwindTwin.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005">
+        <EntityContainer Name="NorthwindTwinTargetContainer" >
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="NorthwindTwin" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="NorthwindTwinContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Categories" EntityType="NorthwindTwin.Category" />
+          <EntitySet Name="CustomerDemographics" EntityType="NorthwindTwin.CustomerDemographic" />
+          <EntitySet Name="Customers" EntityType="NorthwindTwin.Customer" />
+          <EntitySet Name="Employees" EntityType="NorthwindTwin.Employee" />
+          <EntitySet Name="Order_Details" EntityType="NorthwindTwin.Order_Detail" />
+          <EntitySet Name="Orders" EntityType="NorthwindTwin.Order" />
+          <EntitySet Name="Products" EntityType="NorthwindTwin.Product" />
+          <EntitySet Name="Regions" EntityType="NorthwindTwin.Region" />
+          <EntitySet Name="Shippers" EntityType="NorthwindTwin.Shipper" />
+          <EntitySet Name="Suppliers" EntityType="NorthwindTwin.Supplier" />
+          <EntitySet Name="sysdiagrams" EntityType="NorthwindTwin.sysdiagram" />
+          <EntitySet Name="Territories" EntityType="NorthwindTwin.Territory" />
+          <EntitySet Name="Alphabetical_list_of_products" EntityType="NorthwindTwin.Alphabetical_list_of_product" />
+          <EntitySet Name="Category_Sales_for_1997" EntityType="NorthwindTwin.Category_Sales_for_1997" />
+          <EntitySet Name="Current_Product_Lists" EntityType="NorthwindTwin.Current_Product_List" />
+          <EntitySet Name="Customer_and_Suppliers_by_Cities" EntityType="NorthwindTwin.Customer_and_Suppliers_by_City" />
+          <EntitySet Name="Invoices" EntityType="NorthwindTwin.Invoice" />
+          <EntitySet Name="Order_Details_Extendeds" EntityType="NorthwindTwin.Order_Details_Extended" />
+          <EntitySet Name="Order_Subtotals" EntityType="NorthwindTwin.Order_Subtotal" />
+          <EntitySet Name="Orders_Qries" EntityType="NorthwindTwin.Orders_Qry" />
+          <EntitySet Name="Product_Sales_for_1997" EntityType="NorthwindTwin.Product_Sales_for_1997" />
+          <EntitySet Name="Products_Above_Average_Prices" EntityType="NorthwindTwin.Products_Above_Average_Price" />
+          <EntitySet Name="Products_by_Categories" EntityType="NorthwindTwin.Products_by_Category" />
+          <EntitySet Name="Sales_by_Categories" EntityType="NorthwindTwin.Sales_by_Category" />
+          <EntitySet Name="Sales_Totals_by_Amounts" EntityType="NorthwindTwin.Sales_Totals_by_Amount" />
+          <EntitySet Name="Summary_of_Sales_by_Quarters" EntityType="NorthwindTwin.Summary_of_Sales_by_Quarter" />
+          <EntitySet Name="Summary_of_Sales_by_Years" EntityType="NorthwindTwin.Summary_of_Sales_by_Year" />
+          <AssociationSet Name="FK_Products_Categories" Association="NorthwindTwin.FK_Products_Categories">
+            <End Role="Category" EntitySet="Categories" />
+            <End Role="Product" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="CustomerCustomerDemo" Association="NorthwindTwin.CustomerCustomerDemo">
+            <End Role="CustomerDemographic" EntitySet="CustomerDemographics" />
+            <End Role="Customer" EntitySet="Customers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Orders_Customers" Association="NorthwindTwin.FK_Orders_Customers">
+            <End Role="Customer" EntitySet="Customers" />
+            <End Role="Order" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employees_Employees" Association="NorthwindTwin.FK_Employees_Employees">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="Employee1" EntitySet="Employees" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Orders_Employees" Association="NorthwindTwin.FK_Orders_Employees">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="Order" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="EmployeeTerritories" Association="NorthwindTwin.EmployeeTerritories">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="Territory" EntitySet="Territories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Order_Details_Orders" Association="NorthwindTwin.FK_Order_Details_Orders">
+            <End Role="Order" EntitySet="Orders" />
+            <End Role="Order_Detail" EntitySet="Order_Details" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Order_Details_Products" Association="NorthwindTwin.FK_Order_Details_Products">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="Order_Detail" EntitySet="Order_Details" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Territories_Region" Association="NorthwindTwin.FK_Territories_Region">
+            <End Role="Region" EntitySet="Regions" />
+            <End Role="Territory" EntitySet="Territories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Orders_Shippers" Association="NorthwindTwin.FK_Orders_Shippers">
+            <End Role="Shipper" EntitySet="Shippers" />
+            <End Role="Order" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Products_Suppliers" Association="NorthwindTwin.FK_Products_Suppliers">
+            <End Role="Supplier" EntitySet="Suppliers" />
+            <End Role="Product" EntitySet="Products" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="CategoryID" />
+          </Key>
+          <Property Name="CategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryName" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Picture" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="Products" Relationship="NorthwindTwin.FK_Products_Categories" FromRole="Category" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="CustomerDemographic">
+          <Key>
+            <PropertyRef Name="CustomerTypeID" />
+          </Key>
+          <Property Name="CustomerTypeID" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="CustomerDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Customers" Relationship="NorthwindTwin.CustomerCustomerDemo" FromRole="CustomerDemographic" ToRole="Customer" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="CustomerID" />
+          </Key>
+          <Property Name="CustomerID" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="true" />
+          <Property Name="CompanyName" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="ContactName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ContactTitle" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Region" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="PostalCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Country" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
+          <Property Name="Fax" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CustomerDemographics" Relationship="NorthwindTwin.CustomerCustomerDemo" FromRole="Customer" ToRole="CustomerDemographic" />
+          <NavigationProperty Name="Orders" Relationship="NorthwindTwin.FK_Orders_Customers" FromRole="Customer" ToRole="Order" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="EmployeeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Title" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="TitleOfCourtesy" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="BirthDate" Type="DateTime" Precision="3" />
+          <Property Name="HireDate" Type="DateTime" Precision="3" />
+          <Property Name="Address" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Region" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="PostalCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Country" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="HomePhone" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
+          <Property Name="Extension" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ReportsTo" Type="Int32" />
+          <Property Name="PhotoPath" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Employees1" Relationship="NorthwindTwin.FK_Employees_Employees" FromRole="Employee" ToRole="Employee1" />
+          <NavigationProperty Name="Employee1" Relationship="NorthwindTwin.FK_Employees_Employees" FromRole="Employee1" ToRole="Employee" />
+          <NavigationProperty Name="Orders" Relationship="NorthwindTwin.FK_Orders_Employees" FromRole="Employee" ToRole="Order" />
+          <NavigationProperty Name="Territories" Relationship="NorthwindTwin.EmployeeTerritories" FromRole="Employee" ToRole="Territory" />
+        </EntityType>
+        <EntityType Name="Order_Detail">
+          <Key>
+            <PropertyRef Name="OrderID" />
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="OrderID" Type="Int32" Nullable="false" />
+          <Property Name="ProductID" Type="Int32" Nullable="false" />
+          <Property Name="UnitPrice" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="Quantity" Type="Int16" Nullable="false" />
+          <Property Name="Discount" Type="Single" Nullable="false" />
+          <NavigationProperty Name="Order" Relationship="NorthwindTwin.FK_Order_Details_Orders" FromRole="Order_Detail" ToRole="Order" />
+          <NavigationProperty Name="Product" Relationship="NorthwindTwin.FK_Order_Details_Products" FromRole="Order_Detail" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="OrderID" />
+          </Key>
+          <Property Name="OrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CustomerID" Type="String" MaxLength="5" FixedLength="true" Unicode="true" />
+          <Property Name="EmployeeID" Type="Int32" />
+          <Property Name="OrderDate" Type="DateTime" Precision="3" />
+          <Property Name="RequiredDate" Type="DateTime" Precision="3" />
+          <Property Name="ShippedDate" Type="DateTime" Precision="3" />
+          <Property Name="ShipVia" Type="Int32" />
+          <Property Name="Freight" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="ShipName" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="ShipAddress" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="ShipCity" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="ShipRegion" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="ShipPostalCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ShipCountry" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Customer" Relationship="NorthwindTwin.FK_Orders_Customers" FromRole="Order" ToRole="Customer" />
+          <NavigationProperty Name="Employee" Relationship="NorthwindTwin.FK_Orders_Employees" FromRole="Order" ToRole="Employee" />
+          <NavigationProperty Name="Order_Details" Relationship="NorthwindTwin.FK_Order_Details_Orders" FromRole="Order" ToRole="Order_Detail" />
+          <NavigationProperty Name="Shipper" Relationship="NorthwindTwin.FK_Orders_Shippers" FromRole="Order" ToRole="Shipper" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="ProductID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductName" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="SupplierID" Type="Int32" />
+          <Property Name="CategoryID" Type="Int32" />
+          <Property Name="QuantityPerUnit" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="UnitPrice" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="UnitsInStock" Type="Int16" />
+          <Property Name="UnitsOnOrder" Type="Int16" />
+          <Property Name="ReorderLevel" Type="Int16" />
+          <Property Name="Discontinued" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Category" Relationship="NorthwindTwin.FK_Products_Categories" FromRole="Product" ToRole="Category" />
+          <NavigationProperty Name="Order_Details" Relationship="NorthwindTwin.FK_Order_Details_Products" FromRole="Product" ToRole="Order_Detail" />
+          <NavigationProperty Name="Supplier" Relationship="NorthwindTwin.FK_Products_Suppliers" FromRole="Product" ToRole="Supplier" />
+        </EntityType>
+        <EntityType Name="Region">
+          <Key>
+            <PropertyRef Name="RegionID" />
+          </Key>
+          <Property Name="RegionID" Type="Int32" Nullable="false" />
+          <Property Name="RegionDescription" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="Territories" Relationship="NorthwindTwin.FK_Territories_Region" FromRole="Region" ToRole="Territory" />
+        </EntityType>
+        <EntityType Name="Shipper">
+          <Key>
+            <PropertyRef Name="ShipperID" />
+          </Key>
+          <Property Name="ShipperID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CompanyName" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Orders" Relationship="NorthwindTwin.FK_Orders_Shippers" FromRole="Shipper" ToRole="Order" />
+        </EntityType>
+        <EntityType Name="Supplier">
+          <Key>
+            <PropertyRef Name="SupplierID" />
+          </Key>
+          <Property Name="SupplierID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CompanyName" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="ContactName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ContactTitle" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Region" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="PostalCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Country" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
+          <Property Name="Fax" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
+          <Property Name="HomePage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Products" Relationship="NorthwindTwin.FK_Products_Suppliers" FromRole="Supplier" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Territory">
+          <Key>
+            <PropertyRef Name="TerritoryID" />
+          </Key>
+          <Property Name="TerritoryID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="TerritoryDescription" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="RegionID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Employees" Relationship="NorthwindTwin.EmployeeTerritories" FromRole="Territory" ToRole="Employee" />
+          <NavigationProperty Name="Region" Relationship="NorthwindTwin.FK_Territories_Region" FromRole="Territory" ToRole="Region" />
+        </EntityType>
+        <EntityType Name="Alphabetical_list_of_product">
+          <Key>
+            <PropertyRef Name="ProductID" />
+            <PropertyRef Name="ProductName" />
+            <PropertyRef Name="Discontinued" />
+            <PropertyRef Name="CategoryName" />
+          </Key>
+          <Property Name="ProductID" Type="Int32" Nullable="false" />
+          <Property Name="ProductName" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="SupplierID" Type="Int32" />
+          <Property Name="CategoryID" Type="Int32" />
+          <Property Name="QuantityPerUnit" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="UnitPrice" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="UnitsInStock" Type="Int16" />
+          <Property Name="UnitsOnOrder" Type="Int16" />
+          <Property Name="ReorderLevel" Type="Int16" />
+          <Property Name="Discontinued" Type="Boolean" Nullable="false" />
+          <Property Name="CategoryName" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Category_Sales_for_1997">
+          <Key>
+            <PropertyRef Name="CategoryName" />
+          </Key>
+          <Property Name="CategoryName" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="CategorySales" Type="Decimal" Precision="19" Scale="4" />
+        </EntityType>
+        <EntityType Name="Current_Product_List">
+          <Key>
+            <PropertyRef Name="ProductID" />
+            <PropertyRef Name="ProductName" />
+          </Key>
+          <Property Name="ProductID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductName" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Customer_and_Suppliers_by_City">
+          <Key>
+            <PropertyRef Name="CompanyName" />
+            <PropertyRef Name="Relationship" />
+          </Key>
+          <Property Name="City" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="CompanyName" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="ContactName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Relationship" Type="String" Nullable="false" MaxLength="9" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Invoice">
+          <Key>
+            <PropertyRef Name="CustomerName" />
+            <PropertyRef Name="Salesperson" />
+            <PropertyRef Name="OrderID" />
+            <PropertyRef Name="ShipperName" />
+            <PropertyRef Name="ProductID" />
+            <PropertyRef Name="ProductName" />
+            <PropertyRef Name="UnitPrice" />
+            <PropertyRef Name="Quantity" />
+            <PropertyRef Name="Discount" />
+          </Key>
+          <Property Name="ShipName" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="ShipAddress" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="ShipCity" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="ShipRegion" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="ShipPostalCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ShipCountry" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="CustomerID" Type="String" MaxLength="5" FixedLength="true" Unicode="true" />
+          <Property Name="CustomerName" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Region" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="PostalCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Country" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Salesperson" Type="String" Nullable="false" MaxLength="31" FixedLength="false" Unicode="true" />
+          <Property Name="OrderID" Type="Int32" Nullable="false" />
+          <Property Name="OrderDate" Type="DateTime" Precision="3" />
+          <Property Name="RequiredDate" Type="DateTime" Precision="3" />
+          <Property Name="ShippedDate" Type="DateTime" Precision="3" />
+          <Property Name="ShipperName" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="ProductID" Type="Int32" Nullable="false" />
+          <Property Name="ProductName" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="UnitPrice" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="Quantity" Type="Int16" Nullable="false" />
+          <Property Name="Discount" Type="Single" Nullable="false" />
+          <Property Name="ExtendedPrice" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Freight" Type="Decimal" Precision="19" Scale="4" />
+        </EntityType>
+        <EntityType Name="Order_Details_Extended">
+          <Key>
+            <PropertyRef Name="OrderID" />
+            <PropertyRef Name="ProductID" />
+            <PropertyRef Name="ProductName" />
+            <PropertyRef Name="UnitPrice" />
+            <PropertyRef Name="Quantity" />
+            <PropertyRef Name="Discount" />
+          </Key>
+          <Property Name="OrderID" Type="Int32" Nullable="false" />
+          <Property Name="ProductID" Type="Int32" Nullable="false" />
+          <Property Name="ProductName" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="UnitPrice" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="Quantity" Type="Int16" Nullable="false" />
+          <Property Name="Discount" Type="Single" Nullable="false" />
+          <Property Name="ExtendedPrice" Type="Decimal" Precision="19" Scale="4" />
+        </EntityType>
+        <EntityType Name="Order_Subtotal">
+          <Key>
+            <PropertyRef Name="OrderID" />
+          </Key>
+          <Property Name="OrderID" Type="Int32" Nullable="false" />
+          <Property Name="Subtotal" Type="Decimal" Precision="19" Scale="4" />
+        </EntityType>
+        <EntityType Name="Orders_Qry">
+          <Key>
+            <PropertyRef Name="OrderID" />
+            <PropertyRef Name="CompanyName" />
+          </Key>
+          <Property Name="OrderID" Type="Int32" Nullable="false" />
+          <Property Name="CustomerID" Type="String" MaxLength="5" FixedLength="true" Unicode="true" />
+          <Property Name="EmployeeID" Type="Int32" />
+          <Property Name="OrderDate" Type="DateTime" Precision="3" />
+          <Property Name="RequiredDate" Type="DateTime" Precision="3" />
+          <Property Name="ShippedDate" Type="DateTime" Precision="3" />
+          <Property Name="ShipVia" Type="Int32" />
+          <Property Name="Freight" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="ShipName" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="ShipAddress" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="ShipCity" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="ShipRegion" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="ShipPostalCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ShipCountry" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="CompanyName" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Region" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="PostalCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Country" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Product_Sales_for_1997">
+          <Key>
+            <PropertyRef Name="CategoryName" />
+            <PropertyRef Name="ProductName" />
+          </Key>
+          <Property Name="CategoryName" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="ProductName" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="ProductSales" Type="Decimal" Precision="19" Scale="4" />
+        </EntityType>
+        <EntityType Name="Products_Above_Average_Price">
+          <Key>
+            <PropertyRef Name="ProductName" />
+          </Key>
+          <Property Name="ProductName" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="UnitPrice" Type="Decimal" Precision="19" Scale="4" />
+        </EntityType>
+        <EntityType Name="Products_by_Category">
+          <Key>
+            <PropertyRef Name="CategoryName" />
+            <PropertyRef Name="ProductName" />
+            <PropertyRef Name="Discontinued" />
+          </Key>
+          <Property Name="CategoryName" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="ProductName" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="QuantityPerUnit" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="UnitsInStock" Type="Int16" />
+          <Property Name="Discontinued" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Sales_by_Category">
+          <Key>
+            <PropertyRef Name="CategoryID" />
+            <PropertyRef Name="CategoryName" />
+            <PropertyRef Name="ProductName" />
+          </Key>
+          <Property Name="CategoryID" Type="Int32" Nullable="false" />
+          <Property Name="CategoryName" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="ProductName" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="ProductSales" Type="Decimal" Precision="19" Scale="4" />
+        </EntityType>
+        <EntityType Name="Sales_Totals_by_Amount">
+          <Key>
+            <PropertyRef Name="OrderID" />
+            <PropertyRef Name="CompanyName" />
+          </Key>
+          <Property Name="SaleAmount" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="OrderID" Type="Int32" Nullable="false" />
+          <Property Name="CompanyName" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="ShippedDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Summary_of_Sales_by_Quarter">
+          <Key>
+            <PropertyRef Name="OrderID" />
+          </Key>
+          <Property Name="ShippedDate" Type="DateTime" Precision="3" />
+          <Property Name="OrderID" Type="Int32" Nullable="false" />
+          <Property Name="Subtotal" Type="Decimal" Precision="19" Scale="4" />
+        </EntityType>
+        <EntityType Name="Summary_of_Sales_by_Year">
+          <Key>
+            <PropertyRef Name="OrderID" />
+          </Key>
+          <Property Name="ShippedDate" Type="DateTime" Precision="3" />
+          <Property Name="OrderID" Type="Int32" Nullable="false" />
+          <Property Name="Subtotal" Type="Decimal" Precision="19" Scale="4" />
+        </EntityType>
+        <Association Name="FK_Products_Categories">
+          <End Type="NorthwindTwin.Category" Role="Category" Multiplicity="0..1" />
+          <End Type="NorthwindTwin.Product" Role="Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="CategoryID" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="CustomerCustomerDemo">
+          <End Type="NorthwindTwin.CustomerDemographic" Role="CustomerDemographic" Multiplicity="*" />
+          <End Type="NorthwindTwin.Customer" Role="Customer" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_Orders_Customers">
+          <End Type="NorthwindTwin.Customer" Role="Customer" Multiplicity="0..1" />
+          <End Type="NorthwindTwin.Order" Role="Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customer">
+              <PropertyRef Name="CustomerID" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="CustomerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employees_Employees">
+          <End Type="NorthwindTwin.Employee" Role="Employee" Multiplicity="0..1" />
+          <End Type="NorthwindTwin.Employee" Role="Employee1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="Employee1">
+              <PropertyRef Name="ReportsTo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Orders_Employees">
+          <End Type="NorthwindTwin.Employee" Role="Employee" Multiplicity="0..1" />
+          <End Type="NorthwindTwin.Order" Role="Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="EmployeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="EmployeeTerritories">
+          <End Type="NorthwindTwin.Employee" Role="Employee" Multiplicity="*" />
+          <End Type="NorthwindTwin.Territory" Role="Territory" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_Order_Details_Orders">
+          <End Type="NorthwindTwin.Order" Role="Order" Multiplicity="1" />
+          <End Type="NorthwindTwin.Order_Detail" Role="Order_Detail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Order">
+              <PropertyRef Name="OrderID" />
+            </Principal>
+            <Dependent Role="Order_Detail">
+              <PropertyRef Name="OrderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Order_Details_Products">
+          <End Type="NorthwindTwin.Product" Role="Product" Multiplicity="1" />
+          <End Type="NorthwindTwin.Order_Detail" Role="Order_Detail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="Order_Detail">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Territories_Region">
+          <End Type="NorthwindTwin.Region" Role="Region" Multiplicity="1" />
+          <End Type="NorthwindTwin.Territory" Role="Territory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Region">
+              <PropertyRef Name="RegionID" />
+            </Principal>
+            <Dependent Role="Territory">
+              <PropertyRef Name="RegionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Orders_Shippers">
+          <End Type="NorthwindTwin.Shipper" Role="Shipper" Multiplicity="0..1" />
+          <End Type="NorthwindTwin.Order" Role="Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Shipper">
+              <PropertyRef Name="ShipperID" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="ShipVia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Products_Suppliers">
+          <End Type="NorthwindTwin.Supplier" Role="Supplier" Multiplicity="0..1" />
+          <End Type="NorthwindTwin.Product" Role="Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Supplier">
+              <PropertyRef Name="SupplierID" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="SupplierID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs" Space="C-S">
+        <Alias Key="Model" Value="NorthwindTwin" />
+        <Alias Key="Target" Value="NorthwindTwin.Store" />
+        <EntityContainerMapping CdmEntityContainer="NorthwindTwinContainer" StorageEntityContainer="NorthwindTwinTargetContainer">
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
