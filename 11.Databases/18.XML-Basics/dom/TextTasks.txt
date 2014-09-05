@@ -1,0 +1,24 @@
+1.
+Extensible Markup Language (XML) is a markup language that defines a set of rules for encoding documents in a format that is both human-readable and machine-readable.
+It is defined in the XML 1.0 Specification produced by the W3C, and several other related specifications, all free open standards.
+The design goals of XML emphasize simplicity, generality, and usability over the Internet.
+It is a textual data format with strong support via Unicode for different human languages.
+ Although the design of XML focuses on documents, it is widely used for the representation of arbitrary data structures, for example in web services.
+ 
+3.
+XML Namespaces provide a method to avoid element name conflicts.
+When using prefixes in XML, a so-called namespace for the prefix must be defined.
+The namespace is defined by the xmlns attribute in the start tag of an element.
+The namespace declaration has the following syntax. xmlns:prefix="URI".
+
+4.
+In computing, a uniform resource identifier (URI) is a string of characters used to identify a name of a resource.
+URLs:
+A URL is a URI that, in addition to identifying a web resource, specifies the means of acting upon or obtaining the representation, specifying both its primary access mechanism and network location.
+ For example, the URL http://example.org/wiki/Main_Page refers to a resource identified as /wiki/Main_Page whose representation, in the form of HTML and related code, obtainable via HyperText Transfer Protocol (http) from a network host whose domain name is example.org.
+
+URNs:
+A URN is a URI that identifies a resource by name in a particular namespace.
+A URN can be used to talk about a resource without implying its location or how to access it.
+
+5.

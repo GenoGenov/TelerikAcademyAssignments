@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="Students_XSL.xslt"?>
+<students xmlns:students="urn:students" >
+  <student>
+    <name>Gosho</name>
+    <sex>Male</sex>
+    <birthDate>2014-08-01</birthDate>
+    <phone>0884256643446</phone>
+    <email>gosho@gosho.com</email>
+    <course>C#</course>
+    <speciality>Software engineering</speciality>
+    <facoultyNumber>4356675</facoultyNumber>
+    <exams>
+      <exam name=" C# Programming">
+        <tutor>Nikolay</tutor>
+        <score>1234</score>
+      </exam>
+      <exam name="DSA">
+        <tutor>Nikolay</tutor>
+        <score>10</score>
+      </exam>
+    </exams>
+    <enrollment>
+      <date>2001/01/01</date>
+      <examScore>400</examScore>
+      <endorsements>
+        <endorsement>
+          Something
+        </endorsement>
+      </endorsements>
+    </enrollment>
+  </student>
+  <student>
+    <name>Pesho</name>
+    <sex>Male</sex>
+    <birthDate>2014-08-01</birthDate>
+    <phone>0884256643446</phone>
+    <email>gosho@gosho.com</email>
+    <course>C#</course>
+    <speciality>Software engineering</speciality>
+    <facoultyNumber>4356675</facoultyNumber>
+    <exams>
+      <exam name=" C# Programming">
+        <tutor>Nikolay</tutor>
+        <score>1234</score>
+      </exam>
+      <exam name="DSA">
+        <tutor>Nikolay</tutor>
+        <score>10</score>
+      </exam>
+    </exams>
+    <enrollment>
+      <date>2001-01-01</date>
+      <examScore>400</examScore>
+      <endorsements>
+        <endorsement>
+          Something
+        </endorsement>
+      </endorsements>
+    </enrollment>
+  </student>
+
+  <student>
+    <name>Mincho</name>
+    <sex>Male</sex>
+    <birthDate>2014-08-01</birthDate>
+    <phone>0884256643446</phone>
+    <email>gosho@gosho.com</email>
+    <course>C#</course>
+    <speciality>Software engineering</speciality>
+    <facoultyNumber>4356675</facoultyNumber>
+    <exams>
+      <exam name=" C# Programming">
+        <tutor>Nikolay</tutor>
+        <score>1234</score>
+      </exam>
+      <exam name="DSA">
+        <tutor>Nikolay</tutor>
+        <score>10</score>
+      </exam>
+    </exams>
+    <enrollment>
+      <date>2001-01-01</date>
+      <examScore>400</examScore>
+      <endorsements>
+        <endorsement>
+          Something
+        </endorsement>
+      </endorsements>
+    </enrollment>
+  </student>
+</students>
