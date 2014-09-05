@@ -1,0 +1,107 @@
+/****** Object:  Database [PerformanceTests]    Script Date: 4.9.2014 г. 18:45:20 ******/
+CREATE DATABASE PerformanceTests;
+ALTER DATABASE [PerformanceTests] SET COMPATIBILITY_LEVEL = 120
+
+IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
+begin
+EXEC [PerformanceTests].[dbo].[sp_fulltext_database] @action = 'enable'
+end
+GO
+ALTER DATABASE [PerformanceTests] SET ANSI_NULL_DEFAULT OFF 
+GO
+ALTER DATABASE [PerformanceTests] SET ANSI_NULLS OFF 
+GO
+ALTER DATABASE [PerformanceTests] SET ANSI_PADDING OFF 
+GO
+ALTER DATABASE [PerformanceTests] SET ANSI_WARNINGS OFF 
+GO
+ALTER DATABASE [PerformanceTests] SET ARITHABORT OFF 
+GO
+ALTER DATABASE [PerformanceTests] SET AUTO_CLOSE OFF 
+GO
+ALTER DATABASE [PerformanceTests] SET AUTO_SHRINK OFF 
+GO
+ALTER DATABASE [PerformanceTests] SET AUTO_UPDATE_STATISTICS ON 
+GO
+ALTER DATABASE [PerformanceTests] SET CURSOR_CLOSE_ON_COMMIT OFF 
+GO
+ALTER DATABASE [PerformanceTests] SET CURSOR_DEFAULT  GLOBAL 
+GO
+ALTER DATABASE [PerformanceTests] SET CONCAT_NULL_YIELDS_NULL OFF 
+GO
+ALTER DATABASE [PerformanceTests] SET NUMERIC_ROUNDABORT OFF 
+GO
+ALTER DATABASE [PerformanceTests] SET QUOTED_IDENTIFIER OFF 
+GO
+ALTER DATABASE [PerformanceTests] SET RECURSIVE_TRIGGERS OFF 
+GO
+ALTER DATABASE [PerformanceTests] SET  DISABLE_BROKER 
+GO
+ALTER DATABASE [PerformanceTests] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
+GO
+ALTER DATABASE [PerformanceTests] SET DATE_CORRELATION_OPTIMIZATION OFF 
+GO
+ALTER DATABASE [PerformanceTests] SET TRUSTWORTHY OFF 
+GO
+ALTER DATABASE [PerformanceTests] SET ALLOW_SNAPSHOT_ISOLATION OFF 
+GO
+ALTER DATABASE [PerformanceTests] SET PARAMETERIZATION SIMPLE 
+GO
+ALTER DATABASE [PerformanceTests] SET READ_COMMITTED_SNAPSHOT OFF 
+GO
+ALTER DATABASE [PerformanceTests] SET HONOR_BROKER_PRIORITY OFF 
+GO
+ALTER DATABASE [PerformanceTests] SET RECOVERY FULL 
+GO
+ALTER DATABASE [PerformanceTests] SET  MULTI_USER 
+GO
+ALTER DATABASE [PerformanceTests] SET PAGE_VERIFY CHECKSUM  
+GO
+ALTER DATABASE [PerformanceTests] SET DB_CHAINING OFF 
+GO
+ALTER DATABASE [PerformanceTests] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
+GO
+ALTER DATABASE [PerformanceTests] SET TARGET_RECOVERY_TIME = 0 SECONDS 
+GO
+ALTER DATABASE [PerformanceTests] SET DELAYED_DURABILITY = DISABLED 
+GO
+EXEC sys.sp_db_vardecimal_storage_format N'PerformanceTests', N'ON'
+GO
+USE [PerformanceTests]
+GO
+/****** Object:  FullTextCatalog [LogsFullTextCatalog]    Script Date: 4.9.2014 г. 18:45:20 ******/
+CREATE FULLTEXT CATALOG [LogsFullTextCatalog]WITH ACCENT_SENSITIVITY = OFF
+
+GO
+/****** Object:  PartitionFunction [ifts_comp_fragment_partition_function_39CD8610]    Script Date: 4.9.2014 г. 18:45:20 ******/
+CREATE PARTITION FUNCTION [ifts_comp_fragment_partition_function_39CD8610](varbinary(128)) AS RANGE LEFT FOR VALUES (0x00740065007800740032003000350035003400350033)
+GO
+/****** Object:  PartitionScheme [ifts_comp_fragment_data_space_39CD8610]    Script Date: 4.9.2014 г. 18:45:20 ******/
+CREATE PARTITION SCHEME [ifts_comp_fragment_data_space_39CD8610] AS PARTITION [ifts_comp_fragment_partition_function_39CD8610] TO ([PRIMARY], [PRIMARY])
+GO
+/****** Object:  Table [dbo].[Logs]    Script Date: 4.9.2014 г. 18:45:20 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Logs](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[LogDate] [datetime] NOT NULL,
+	[LogText] [nvarchar](20) NOT NULL,
+ CONSTRAINT [PK_Logs] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+/****** Object:  Index [IDX_Logs_MsgPrice]    Script Date: 4.9.2014 г. 18:45:20 ******/
+CREATE NONCLUSTERED INDEX [IDX_Logs_MsgPrice] ON [dbo].[Logs]
+(
+	[LogDate] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+GO
+USE [master]
+GO
+ALTER DATABASE [PerformanceTests] SET  READ_WRITE 
+GO
