@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1.FriendsOfPesho", "1.FriendsOfPesho\1.FriendsOfPesho.csproj", "{228B5D99-6863-4927-8B2C-127D3B219FE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.Salaries", "2.Salaries\2.Salaries.csproj", "{5DCBBE95-5644-4799-8375-855831D9CE8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3.MinimumCableCost", "3.MinimumCableCost\3.MinimumCableCost.csproj", "{AC6101B3-8732-4B32-9D78-F3AEB3E7C7A4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{228B5D99-6863-4927-8B2C-127D3B219FE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{228B5D99-6863-4927-8B2C-127D3B219FE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{228B5D99-6863-4927-8B2C-127D3B219FE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{228B5D99-6863-4927-8B2C-127D3B219FE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DCBBE95-5644-4799-8375-855831D9CE8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DCBBE95-5644-4799-8375-855831D9CE8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DCBBE95-5644-4799-8375-855831D9CE8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DCBBE95-5644-4799-8375-855831D9CE8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC6101B3-8732-4B32-9D78-F3AEB3E7C7A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC6101B3-8732-4B32-9D78-F3AEB3E7C7A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC6101B3-8732-4B32-9D78-F3AEB3E7C7A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC6101B3-8732-4B32-9D78-F3AEB3E7C7A4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
