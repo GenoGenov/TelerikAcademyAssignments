@@ -1,4 +1,4 @@
-﻿namespace _03.SupermarketQueue
+﻿namespace _3.SupermarketQueue
 {
     using System;
     using System.Collections.Generic;
@@ -14,7 +14,7 @@
             var names = new Dictionary<string, int>();
 
             var commandParts = Console.ReadLine().Split(' ');
-
+            var result = new StringBuilder();
             while (commandParts[0] != "End")
             {
                 switch (commandParts[0])
@@ -26,16 +26,16 @@
                             names[commandParts[1]] = 0;
                         }
                         names[commandParts[1]]++;
-                        Console.WriteLine("OK");
+                        result.AppendLine("OK");
                         break;
                     case "Insert":
                         var index = int.Parse(commandParts[1]);
                         if (index > queue.Count)
                         {
-                            Console.WriteLine("Error");
+                            result.AppendLine("Error");
                             break;
                         }
-                        Console.WriteLine("OK");
+                        result.AppendLine("OK");
                          if (!names.ContainsKey(commandParts[2]))
                         {
                             names[commandParts[2]] = 0;
@@ -52,15 +52,15 @@
                     case "Find":
                         if (!names.ContainsKey(commandParts[1]))
                         {
-                            Console.WriteLine(0);break;
+                            result.AppendLine("0"); break;
                         }
-                        Console.WriteLine(names[commandParts[1]]);
+                        result.AppendLine(names[commandParts[1]].ToString());
                         break;
                     case "Serve":
                         var count = int.Parse(commandParts[1]);
                         if (count > queue.Count)
                         {
-                            Console.WriteLine("Error");
+                            result.AppendLine("Error");
                             break;
                         }
                         var served = new StringBuilder();
@@ -71,12 +71,14 @@
                             served.AppendFormat(" {0}", person);
                             queue.RemoveAt(0);
                         }
-                        Console.WriteLine(served.ToString().Trim());
+                        result.AppendLine(served.ToString().Trim());
                         break;
                 }
 
                 commandParts = Console.ReadLine().Split(' ');
             }
+
+            Console.WriteLine(result.ToString());
         }
     }
 }
