@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<catalogue>
+  <album name="tralala" artist="kichka" producer="painera" year="2004" price="0.5">
+    <song>
+      <title>nqkva chalga</title>
+      <duration>2.88</duration>
+    </song>
+  </album>
+  <album name="shat na patkata glavata" artist="slavi" producer="slavi" year="1997" price="5">
+    <song>
+      <title>fuck off</title>
+      <duration>3.55</duration>
+    </song>
+    <song>
+      <title>baby</title>
+      <duration>3.55</duration>
+    </song>
+  </album>
+  <album name="No Mercy" artist="slavi" producer="slavi" year="2009" price="5">
+    <song>
+      <title>ad i rai</title>
+      <duration>3.55</duration>
+    </song>
+    <song>
+      <title>bi wish they still</title>
+      <duration>3.55</duration>
+    </song>
+  </album>
+</catalogue>
