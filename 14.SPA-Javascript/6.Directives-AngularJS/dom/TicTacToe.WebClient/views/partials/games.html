@@ -1,0 +1,36 @@
+<div class="container">
+    <section class="popover-content">
+        <h2 class="panel-heading">All games</h2>
+        <ul class="list-group">
+            <li ng-repeat="game in games" id="{{game.Id}}" class="row list-group-item">
+                <div class="col-md-6">
+                    <span class="row">First Player: {{game.FirstPlayer.UserName}}</span>
+                    <span class="row">Second Player: {{game.SecondPlayer?game.SecondPlayer.UserName:"None"}}</span>
+                    <span class="row">Board: {{game.Board}}</span>
+                </div>
+                <div class="col-md-3" ng-hide="!!game.SecondPlayer">
+                    <button class="btn btn-success ladda-button" data-style="expand-right" ng-click="join(game.Id)">Join</button>
+                </div>
+                <div class="game-field col-md-3" ng-show="!!game.FirstPlayer && !!game.SecondPlayer && (game.FirstPlayer.UserName==identity.getCurrentUser().userName || game.SecondPlayer.UserName==identity.getCurrentUser().userName)">
+                    <table class="table table-condensed table table-bordered" game-board="{{game.Board}}" ng-controller="PlayController">
+                        <tr class="1 board-row">
+                            <td class="1" ng-click="play({gameId:game.Id,row:1,col:1},game)"></td>
+                            <td class="2" ng-click="play({gameId:game.Id,row:1,col:2},game)"></td>
+                            <td class="3" ng-click="play({gameId:game.Id,row:1,col:3},game)"></td>
+                        </tr>
+                        <tr class="2 board-row">
+                            <td class="1" ng-click="play({gameId:game.Id,row:2,col:1},game)"></td>
+                            <td class="2" ng-click="play({gameId:game.Id,row:2,col:2},game)"></td>
+                            <td class="3" ng-click="play({gameId:game.Id,row:2,col:3},game)"></td>
+                        </tr>
+                        <tr class="3 board-row">
+                            <td class="1" ng-click="play({gameId:game.Id,row:3,col:1},game)"></td>
+                            <td class="2" ng-click="play({gameId:game.Id,row:3,col:2},game)"></td>
+                            <td class="3" ng-click="play({gameId:game.Id,row:3,col:3},game)"></td>
+                        </tr>
+                    </table>
+                </div>
+            </li>
+        </ul>
+    </section>
+</div>

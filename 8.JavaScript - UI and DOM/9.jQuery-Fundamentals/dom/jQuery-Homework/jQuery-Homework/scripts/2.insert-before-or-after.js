@@ -6,4 +6,8 @@
     $('#append').on('click', function () {
         $('#start').after('<div>after div</div>');
     });
+    
+    $('#lal').on('click', function () {
+        
+    })
 }

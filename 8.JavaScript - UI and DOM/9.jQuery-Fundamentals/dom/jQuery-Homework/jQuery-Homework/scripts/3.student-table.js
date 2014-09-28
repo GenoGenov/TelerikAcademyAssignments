@@ -1,4 +1,6 @@
-﻿window.onload = function () {
+﻿'use strict';
+
+window.onload = function () {
     var students = [{
             fName: 'qnko',
             lName: 'qnkov',

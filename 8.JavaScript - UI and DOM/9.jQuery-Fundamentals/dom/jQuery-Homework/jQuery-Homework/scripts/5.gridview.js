@@ -26,7 +26,6 @@
         rowForm.append($('<label>').html('Grid')).append($('<input class="isGrid" type="radio" name="rowType" value="grid">'));
 
         var confirmBtn = $('<button class="confirm" type="button">').html('Add').appendTo(rowForm);
-
         confirmBtn.on('click', function () {
             var $this = $(this);
             var parent = $($this.closest('.grid' + index));
