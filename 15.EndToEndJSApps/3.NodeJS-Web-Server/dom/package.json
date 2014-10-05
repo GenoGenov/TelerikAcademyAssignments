@@ -1,0 +1,15 @@
+{
+  "name": "NodeJS-Server-Homework",
+  "version": "1.0.0",
+  "description": "Homework",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "guid": "0.0.12",
+    "querystring": "^0.2.0"
+  }
+}
