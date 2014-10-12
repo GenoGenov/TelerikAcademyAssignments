@@ -1,0 +1,10 @@
+doctype html
+head
+    title File Uploader - Upload File
+#content-main
+    h1 Upload File
+    form(name=register action='/upload' method='POST',enctype='multipart/form-data')
+        input(type='file',placeholder='File',name='file' required='required')
+        button(type='submit')
+            |Send
+

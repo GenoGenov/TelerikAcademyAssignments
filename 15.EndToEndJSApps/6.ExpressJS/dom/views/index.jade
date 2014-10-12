@@ -1,0 +1,15 @@
+doctype html
+head
+    link(rel='stylesheet',href='/styles/site.css')
+    title
+        |FileUpload Site
+
+body
+    if(!isAuthenticated)
+        include registration-form
+        include login-form
+    else
+        h1 Welcome To File Upload !
+        br
+        a(href='/upload')
+            button Upload

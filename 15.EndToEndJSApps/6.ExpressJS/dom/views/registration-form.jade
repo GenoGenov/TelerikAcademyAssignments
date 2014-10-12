@@ -1,0 +1,7 @@
+#reg-form
+    h1 Register
+    form(name=register action='/register' method='POST')
+        input(id='usrName',type='text',placeholder='username',name='username')
+        input(id='pswd',type='text',placeholder='Password',name='password')
+        button(type='submit')
+            |Register
