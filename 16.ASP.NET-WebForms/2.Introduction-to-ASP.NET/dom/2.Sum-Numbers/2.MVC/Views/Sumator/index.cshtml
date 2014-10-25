@@ -1,0 +1,22 @@
+﻿@if (ViewBag.error!=null)
+{
+    ViewBag.result = null;
+    <div class="alert alert-danger">
+        @ViewBag.error
+    </div>
+}
+
+    <div class="jumbotron">
+        <h1 class="page-header text-center">Sumator</h1>
+        @using (Html.BeginForm("Calculate", "Sumator"))
+        {
+            <label for="TextBoxFirstNum">First number:</label>
+            <input name="a" type="text" id="TextBoxFirstNum" class="form-control" />
+            <label for="TextBoxSecondNum">Second number:</label>
+            <input name="b" type="text" id="TextBoxSecondNum" class="form-control" />
+            <input type="submit" id="ButtonCalculateSum" value="Calculate Sum" class="btn btn-lg btn-primary" />
+        }
+
+        <label for="sum">Sum:</label>
+        <input type="text" id="sum" class="text-success text-center lead" disabled="disabled" value="@(ViewBag.result?? "")" />
+    </div>

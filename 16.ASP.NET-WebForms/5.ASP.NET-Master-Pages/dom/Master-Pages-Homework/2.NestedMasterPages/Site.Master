@@ -1,0 +1,44 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="_2.NestedMasterPages.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script src="Scripts/jquery-1.9.0.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="Content/site.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+     <header class="page-header text-center">
+            <asp:ContentPlaceHolder ID="head" runat="server">
+                    </asp:ContentPlaceHolder>
+        </header>
+        <div class="container-fluid">
+
+            <div class="row">
+                <ul class="nav col-md-3 lead grayback">
+                 <asp:ContentPlaceHolder ID="navigation" runat="server">
+                    </asp:ContentPlaceHolder>
+                </ul>
+                <div class="col-md-9 jumbotron text-center">
+                    <asp:ContentPlaceHolder ID="main" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+
+            </div>
+        </div>
+
+        <footer class="text-center">
+            <strong class="text-info">Copyright: </strong>
+            <span class="text-primary">
+                <a href="http://telerikacademy.com/">Telerik Academy</a>
+                <small>2014</small>
+            </span>
+        </footer>
+    </form>
+</body>
+</html>

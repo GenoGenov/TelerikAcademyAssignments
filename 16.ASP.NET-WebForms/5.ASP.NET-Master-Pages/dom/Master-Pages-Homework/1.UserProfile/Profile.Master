@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Profile.master.cs" Inherits="_1.UserProfile.Profile" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script src="Scripts/jquery-1.9.0.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="Content/site.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header class="page-header text-center">
+            <h1 class="text-primary">User Profile</h1>
+        </header>
+        <div>
+
+            <div class="row">
+                <ul class="nav col-md-3 lead grayback">
+                    <li>
+                        <a href="/PersonalInfo.aspx"><span class="margin-left">Personal Info</span></a>
+                    </li>
+                    <li>
+                        <a href="/Friends.aspx"><span class="margin-left">Friends</span></a>
+                    </li>
+                    <li>
+                        <a href="/AdditionalInfo.aspx"><span class="margin-left">Additional Info</span></a>
+                    </li>
+                </ul>
+                <div class="col-md-9 container jumbotron text-center">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+
+            </div>
+        </div>
+
+        <footer class="text-center">
+            <strong class="text-info">Copyright: </strong>
+            <span class="text-primary">
+                <a href="http://telerikacademy.com/">Telerik Academy</a>
+                <small>2014</small>
+            </span>
+        </footer>
+    </form>
+</body>
+</html>
