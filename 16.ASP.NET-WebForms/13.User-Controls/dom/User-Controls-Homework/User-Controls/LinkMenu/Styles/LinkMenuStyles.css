@@ -1,0 +1,33 @@
+﻿.LinkMenu_Wrapper table {
+    border: none !important;
+}
+
+.LinkMenu {
+    font-size: 28px;
+}
+
+.LinkMenu_Wrapper {
+    list-style-type: none;
+    background-color: aliceblue;
+}
+
+.LinkMenu_Wrapper td,tr,th {
+    display: inline-block !important;
+}
+
+.LinkMenu li {
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+}
+
+.LinkMenu a {
+    text-decoration: none !important;
+    color: black !important;
+}
+
+.LinkMenu a:hover {
+    text-decoration: none !important;
+    color: #004974 !important;
+    font-size: 22px;
+}

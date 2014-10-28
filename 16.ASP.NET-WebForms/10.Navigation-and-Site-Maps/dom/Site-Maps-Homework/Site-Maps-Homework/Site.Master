@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Site_Maps_Homework.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap.theme.min.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+       <div class="navbar">
+                <div class="navbar-collapse collapse navbar-inverse-collapse">
+                    
+                    <asp:Menu runat="server" ID="Menu" CssClass="bs-component"
+                        DataSourceID="SiteMapDataSource" Orientation="Horizontal"
+                        StaticDisplayLevels="2">
+                    </asp:Menu>
+
+                    <asp:SiteMapDataSource runat="server" ID="SiteMapDataSource" />
+                    <asp:SiteMapPath CssClass="breadcrumb" runat="server" ID="SitePath"></asp:SiteMapPath>
+                </div>
+
+
+            </div>
+
+
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <script>
+        $(document).ready(function () {
+            $('#Menu')
+                .removeAttr('style')
+                .removeAttr('id')
+                .find('ul')
+                .addClass('nav')
+                .addClass('nav-pills')
+                .addClass('nav-stacked')
+                .find('li.has-popup')
+                .addClass('dropdown')
+                .find('>a').addClass('dropdown-toggle')
+                .attr('data-toggle', 'dropdown').append($('<span class="caret"/>'))
+                .parent().find('>ul').addClass('dropdown-menu');
+        });
+    </script>
+</body>
+</html>
